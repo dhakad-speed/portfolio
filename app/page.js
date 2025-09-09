@@ -29,9 +29,9 @@ export default function Home() {
             className="w-100 h-auto"
           />
         </div>
-        <div className="flex lg:flex-col lg:gap-y-20 lg:ml-15 mt-10 md:flex-row md:justify-between  ">
+        <div className="flex lg:flex-col lg:gap-y-20 lg:ml-15 mt-10 md:flex-row  flex-col  justify-center">
           <div className="skill-wrapper">
-            <div className="skill-text text-[#ffffffa3] font-bold">
+            <div className="skill-text text-[#ffffffa3] font-bold pb-5">
               A passionate video editor blending creativity with storytelling to
               craft engaging, polished content. Skilled in Premiere Pro, After
               Effects, and DaVinci Resolve with expertise in cutting, color
@@ -41,7 +41,7 @@ export default function Home() {
 
           <Link href={"/contact"}>
             {" "}
-            <div className="flex lg:justify-self-center md:justify-self-end lg:mt-[-70px]">
+            <div className="flex justify-self-center py-10 lg:mt-[-70px]">
               <button className="rounded-full w-[146px] h-[146px] bg-[#323232] uppercase">
                 Let's Chat
               </button>
