@@ -41,7 +41,7 @@ export default function Home() {
 
           <Link href={"/contact"}>
             {" "}
-            <div className="flex lg:justify-self-center md:justify-self-end lg:mt-[-50px]">
+            <div className="flex lg:justify-self-center md:justify-self-end lg:mt-[-70px]">
               <button className="rounded-full w-[146px] h-[146px] bg-[#323232] uppercase">
                 Let's Chat
               </button>
