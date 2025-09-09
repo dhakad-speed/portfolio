@@ -29,3 +29,17 @@ textarea:focus{
 label{
   font-size: 14px;
 }
+
+@media only screen and (max-width: 479px) {
+  #home {
+    width: 100%;
+  }
+  #nav {
+    width: 100%;
+  }
+  .hero-headline-block{
+  inset: 751px 0 auto;
+  text-align: center;
+
+  }
+}

@@ -1,7 +1,10 @@
 import Link from "next/link";
 export default function Home() {
   return (
-    <div className="max-w-7xl mx-auto lg:mb-[300px] px-4 sm:px-6 lg:px-8 bg-[#1f1f1f] text-white pt-30 items-center">
+    <div
+      id="home"
+      className="max-w-7xl  mx-auto lg:mb-[300px] px-4 sm:px-6 lg:px-8 bg-[#1f1f1f] text-white pt-30 items-center"
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center">
         <div className="flex flex-col gap-y-20 lg:mr-15">
           <div className="intro-text-wrapper">

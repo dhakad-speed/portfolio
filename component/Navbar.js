@@ -11,7 +11,10 @@ export default function Navbar() {
     pathname === href ? "text-white" : "text-[#ffffffa3] hover:text-white";
 
   return (
-    <nav className=" shadow-sm fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out">
+    <nav
+      id="nav"
+      className=" shadow-sm fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 text-2xl text-[#ffffffeb] font-bold">
