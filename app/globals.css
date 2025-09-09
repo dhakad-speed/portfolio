@@ -43,3 +43,34 @@ label{
 
   }
 }
+@media only screen and (max-width: 575px) {
+  #home {
+    width: 100%;
+  }
+  #nav {
+    width: 100%;
+  }
+  .hero-headline-block{
+  inset: 751px 0 auto;
+  text-align: center;
+
+  }
+}
+@media only screen and (max-width: 991px ) {
+  #home {
+    width: 100%;
+    padding-bottom: 45px;
+  }
+  #nav {
+    width: 100%;
+  }
+  .hero-headline-block{
+  inset: 481px auto auto 12px;
+  text-align: center;
+
+  }
+  .why-choose-me{
+    display: flex;
+    justify-self: center;
+  }
+}
