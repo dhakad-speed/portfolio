@@ -1,62 +1,105 @@
 "use client";
 import { useState } from "react";
-import { Menu, X } from "lucide-react"; // install: npm i lucide-react
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href) =>
+    pathname === href ? "text-white" : "text-[#ffffffa3] hover:text-white";
 
   return (
-    <nav className="bg-[#000]  shadow-sm fixed w-full top-0 left-0 z-50">
+    <nav className=" shadow-sm fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 text-2xl text-[#ffffffeb] font-bold">
             <span>Ayush.</span>
           </div>
-          <div className="logo w-[32px] h-[32px] md:hidden justify-self-center flex absolute left-[50%] translate-x-[5%]">
-            <img
-              src="https://iili.io/3znizAJ.png"
-              alt="pfimage"
-              className="w-100 h-auto"
-            />
-          </div>
 
           <div className="hidden md:flex space-x-11">
-            <a href="#" className="text-[#ffffffa3] text-xl">
+            <Link href="/" className={isActive("/") + " text-xl list-none"}>
               Home
-            </a>
-            <a href="#" className="text-[#ffffffa3] text-xl">
+            </Link>
+            <Link
+              href="/about"
+              className={isActive("/about") + " text-xl list-none"}
+            >
               About
-            </a>
-            <a href="#" className="text-[#ffffffa3] text-xl">
-              Services
-            </a>
-            <a href="#" className="text-[#ffffffa3] text-xl">
+            </Link>
+            <Link
+              href="/project"
+              className={isActive("/project") + " text-xl list-none"}
+            >
+              Projects
+            </Link>
+            <Link
+              href="/contact"
+              className={isActive("/contact") + " text-xl list-none"}
+            >
               Contact
-            </a>
+            </Link>
           </div>
 
-          <div className="md:hidden flex items-center">
-            <button onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
+          <div className="md:hidden flex items-center mt-6">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="relative flex flex-col justify-between items-center w-8 h-8"
+            >
+              <span
+                className={`absolute w-6 h-[2px] bg-white rounded transition-all duration-300 ${
+                  isOpen ? "rotate-45" : "-translate-y-2"
+                }`}
+              ></span>
+              <span
+                className={`absolute w-6 h-[2px] bg-white rounded transition-all duration-300 ${
+                  isOpen ? "opacity-0" : "opacity-100"
+                }`}
+              ></span>
+
+              <span
+                className={`absolute w-6 h-[2px] bg-white rounded transition-all duration-300 ${
+                  isOpen ? "-rotate-45" : "translate-y-2"
+                }`}
+              ></span>
             </button>
           </div>
         </div>
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-[#1f1f1f] shadow-lg flex items-center flex-col">
-          <a href="#" className="block px-4 py-2 text-white">
+        <div
+          className={`
+          md:hidden fixed top-16 left-0 w-full bg-[#1f1f1f] shadow-lg flex flex-col items-center
+          transform transition-transform duration-500 ease-in-out
+          ${isOpen ? "translate-y-0" : "-translate-y-full"}
+        `}
+        >
+          <Link
+            href="/"
+            className={isActive("/") + " block px-4 py-2 list-none"}
+          >
             Home
-          </a>
-          <a href="#" className="block px-4 py-2 text-white">
+          </Link>
+          <Link
+            href="/about"
+            className={isActive("/about") + " block px-4 py-2 list-none"}
+          >
             About
-          </a>
-          <a href="#" className="block px-4 py-2 text-white">
-            Services
-          </a>
-          <a href="#" className="block px-4 py-2 text-white">
+          </Link>
+          <Link
+            href="/project"
+            className={isActive("/project") + " block px-4 py-2 list-none"}
+          >
+            Projects
+          </Link>
+          <Link
+            href="/contact"
+            className={isActive("/contact") + " block px-4 py-2 list-none"}
+          >
             Contact
-          </a>
+          </Link>
         </div>
       )}
     </nav>
