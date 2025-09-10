@@ -49,8 +49,8 @@ export default function Home() {
           </Link>
         </div>
         <div className="flex justify-self-center">
-          <div className="hero-headline-block  absolute lg:left-[8%]   lg:top-[411px] lg:right-0 lg:pt-23 md:top-[448px] md:left-5  top-[751px]  text-center left-[121px]">
-            <div className="hero-headline text-[#fff] lg:tracking-[-9.12px] lg:uppercase lg:whitespace-nowrap lg:leading-[144px] lg:font-bold lg:text-[145.5px] md:uppercase  md:font-bold md:tracking-[-4.5px] md:text-[52px] md:leading-[52px]  tracking-[-3px] whitespace-nowrap text-[63px] leading-[55px] uppercase font-bold">
+          <div className="hero-headline-block absolute">
+            <div className="hero-headline dark:text-[#fff] text-black uppercase">
               video editor
             </div>
           </div>
