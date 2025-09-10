@@ -6,10 +6,23 @@ function ContactForm() {
   const [successMessage, setSuccessMessage] = useState("");
 
   const submitForm = async (data) => {
-    await new Promise((res) => setTimeout(res, 1000));
-    console.log(data);
-    setSuccessMessage("Thank you! Your submission has been received!");
-    reset();
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        setSuccessMessage("Thank you! Your submission has been received!");
+        reset();
+      } else {
+        setSuccessMessage("Failed to send your message. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      setSuccessMessage("Something went wrong. Please try again.");
+    }
   };
   const {
     register,

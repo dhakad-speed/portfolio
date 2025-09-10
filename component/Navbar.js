@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 text-2xl text-[#ffffffeb] font-bold">
-            <span>Ayush.</span>
+            <div className="text-3xl">Ayush.</div>
           </div>
 
           <div className="hidden md:flex lg:inline-block space-x-11">
