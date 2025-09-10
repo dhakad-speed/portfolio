@@ -105,5 +105,7 @@ label{
     top: 730px !important;
     left: 85px;
   }
-  
+  .skill-text{
+    padding-block: 3rem;
+  }
 } 
