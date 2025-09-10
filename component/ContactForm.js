@@ -1,10 +1,17 @@
 "use client";
-import React from "react";
-
+import React, { useRef } from "react";
+import { useForm } from "react-hook-form";
 function ContactForm() {
-  const handle = (e) => {
-    console.log("Hello World");
+  const submitForm = (data) => {
+    console.log(data);
   };
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
   return (
     <div className="max-w-7xl w-full min-h-screen mx-auto px-4 sm:px-6 lg:px-8 dark:bg-[#1f1f1f] bg-white text-black dark:text-white pt-30 items-center">
       <div className="contact-form-wrapper pt-20">
@@ -15,25 +22,25 @@ function ContactForm() {
         </div>
         <div className="grid md:grid-cols-12 gap-4 text-2xl pt-30 gap-x-25">
           <div className="md:col-span-7 sm:col-span-1">
-            <form action="#">
+            <form onSubmit={handleSubmit(submitForm)}>
               <div className="input-wrapper flex justify-between md:flex-row flex-col mb-8 gap-3">
                 <div className="input-name flex flex-col gap-4">
                   <label htmlFor="name">Name</label>
                   <input
+                    {...register("name")}
                     className="border-transparent border dark:bg-[#323232] bg-white  text-black dark:text-white tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%] lg:w-[330px] md:w-full"
                     type="text"
                     placeholder="Enter your name"
-                    name="name"
                     id="name"
                   />
                 </div>
                 <div className="input-email flex flex-col gap-4">
                   <label htmlFor="email">Email</label>
                   <input
+                    {...register("email")}
                     className="lg:w-[330px] md:w-full border-transparent border text-black bg-white dark:bg-[#323232] dark:text-white tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%]"
                     type="email"
                     placeholder="Enter address"
-                    name="email"
                     id="email"
                   />
                 </div>
@@ -42,20 +49,20 @@ function ContactForm() {
                 <div className="input-company-name flex flex-col gap-4">
                   <label htmlFor="company-name">Company Name</label>
                   <input
+                    {...register("companyName")}
                     className="lg:w-[330px] md:w-full border-transparent border dark:bg-[#323232] bg-white text-black dark:text-white tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%]"
                     type="text"
                     placeholder="Company Name"
-                    name="company-name"
                     id="company-name"
                   />
                 </div>
                 <div className="input-url flex flex-col gap-4">
                   <label htmlFor="web-url">Website URL (if any)</label>
                   <input
+                    {...register("companyUrl")}
                     className="lg:w-[330px] md:w-full border-transparent border dark:bg-[#323232] text-black bg-white dark:text-white tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%]"
                     type="url"
                     placeholder="www.example.com"
-                    name="web-url"
                     id="web-url"
                   />
                 </div>
@@ -65,6 +72,7 @@ function ContactForm() {
                   What services are you looking for?(select all that apply)
                 </label>
                 <select
+                  {...register("typeOfEdit")}
                   id="options"
                   className="w-full border-transparent border dark:bg-[#323232] bg-white text-black dark:text-white tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%]"
                 >
@@ -76,7 +84,7 @@ function ContactForm() {
               <div className="project-description flex flex-col mt-8 gap-3 ">
                 <label htmlFor="project">Project Description</label>
                 <textarea
-                  name="description"
+                  {...register("description")}
                   placeholder="Write Here"
                   id="project"
                   maxLength={"5000"}
@@ -84,7 +92,7 @@ function ContactForm() {
                 ></textarea>
               </div>
               <div className="div mt-4 dark:bg-[#323232] text-white bg-[#9b36f2] justify-center flex gap-x-2 w-[176px] items-center py-[16px] px-[20px] mb-5  rounded-[1px]  text-[14px]">
-                <input type="submit" value={"Send it over"} onClick={handle} />
+                <button type="submit">Send it over</button>
                 <img
                   src="https://cdn.prod.website-files.com/66dc6345d8e5c096070d8fa6/66dc647819b924db4dba0c31_Vector.svg"
                   alt="arrow"
