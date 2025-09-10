@@ -82,7 +82,8 @@ label{
   .skill-text{
     padding-block: 3rem;
   }
-}@media screen and (max-width:600px) {
+} 
+@media screen and (max-width:600px) {
   .hero-headline-block{
     top: 850px;
     left: 120px;
@@ -92,3 +93,17 @@ label{
   }
 
 }
+@media screen and (max-width: 412px) {
+  #home{
+    width: 100%;
+  
+  }
+  #nav{
+    width: 100%;
+  }
+  .hero-headline-block{
+    top: 730px !important;
+    left: 85px;
+  }
+  
+} 
