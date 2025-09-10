@@ -4,7 +4,7 @@ const nextConfig = {
     ignoreDuringBuilds: true, // disables ESLint errors during build
   },
   images: {
-    domains: ["iili.io"], // ✅ allow this domain
+    domains: ["iili.io", "cdn.prod.website-files.com"],
   },
 };
 

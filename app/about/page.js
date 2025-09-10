@@ -37,6 +37,7 @@ function about() {
             width={500} // set width
             height={500} // set height
             className="object-contain rounded"
+            priority
           />
         </div>
         <div className="flex flex-col gap-y-20 lg:ml-15 mt-6">

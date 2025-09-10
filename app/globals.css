@@ -13,18 +13,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-input:focus{
-  outline: none !important;
-  border: none !important;
-}
-select:focus{
-  outline: none !important;
-  border: none !important;
-}
-textarea:focus{
-  outline: none;
-  border: none;
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;   /* removes blue outline */
+  box-shadow: none !important; /* removes extra shadow */
+  border-color: inherit !important; /* keeps whatever border color you applied */
 }
 label{
   font-size: 14px;
@@ -109,3 +103,19 @@ label{
     margin-top: 3rem !important;
   }
 } 
+
+span{
+  font-size: 12px !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #323232 inset !important; /* dark bg */
+  -webkit-text-fill-color: #ffffff !important; /* white text */
+  caret-color: #ffffff !important; /* white cursor */
+  border-color: #d1d6d4 !important; /* keeps consistent border */
+}

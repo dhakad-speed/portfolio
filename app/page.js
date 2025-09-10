@@ -30,6 +30,7 @@ export default function Home() {
             width={500} // set width
             height={500} // set height
             className="object-contain rounded"
+            priority
           />
         </div>
         <div className="flex lg:flex-col lg:gap-y-20 lg:ml-15 mt-10 md:flex-row  flex-col  justify-center">
@@ -43,7 +44,6 @@ export default function Home() {
           </div>
 
           <Link href={"/contact"}>
-            {" "}
             <div className="flex justify-self-center md:py-10 pb-5 lg:mt-[-70px]">
               <button className="rounded-full w-[146px] h-[146px] bg-[#323232] uppercase">
                 Let's Chat
