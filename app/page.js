@@ -44,7 +44,7 @@ export default function Home() {
 
           <Link href={"/contact"}>
             {" "}
-            <div className="flex justify-self-center md:py-10 pb-4 lg:mt-[-70px]">
+            <div className="flex justify-self-center md:py-10 pb-5 lg:mt-[-70px]">
               <button className="rounded-full w-[146px] h-[146px] bg-[#323232] uppercase">
                 Let's Chat
               </button>
