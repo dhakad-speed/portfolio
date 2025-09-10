@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 export default function Home() {
   return (
     <div
@@ -23,10 +24,12 @@ export default function Home() {
           </div>
         </div>
         <div className="rounded mx-auto">
-          <img
+          <Image
             src="https://iili.io/3znizAJ.png"
             alt="ayush-img"
-            className="w-100 h-auto"
+            width={500} // set width
+            height={500} // set height
+            className="object-contain rounded"
           />
         </div>
         <div className="flex lg:flex-col lg:gap-y-20 lg:ml-15 mt-10 md:flex-row  flex-col  justify-center">

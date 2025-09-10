@@ -21,25 +21,36 @@ export default function Navbar() {
             <span>Ayush.</span>
           </div>
 
-          <div className="hidden md:flex space-x-11">
-            <Link href="/" className={isActive("/") + " text-xl list-none"}>
+          <div className="hidden md:flex lg:inline-block space-x-11">
+            <Link
+              href="/"
+              className={`${isActive(
+                "/"
+              )} text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-white after:transition-transform after:duration-300 hover:after:scale-x-100`}
+            >
               Home
             </Link>
             <Link
               href="/about"
-              className={isActive("/about") + " text-xl list-none"}
+              className={`${isActive(
+                "/about"
+              )} text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-white after:transition-transform after:duration-300 hover:after:scale-x-100`}
             >
               About
             </Link>
             <Link
               href="/project"
-              className={isActive("/project") + " text-xl list-none"}
+              className={`${isActive(
+                "/project"
+              )} text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-white after:transition-transform after:duration-300 hover:after:scale-x-100`}
             >
               Projects
             </Link>
             <Link
               href="/contact"
-              className={isActive("/contact") + " text-xl list-none"}
+              className={`${isActive(
+                "/contact"
+              )} text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-white after:transition-transform after:duration-300 hover:after:scale-x-100`}
             >
               Contact
             </Link>

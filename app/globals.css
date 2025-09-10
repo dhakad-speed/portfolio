@@ -46,7 +46,7 @@ label{
 }
 @media screen and (max-width:991px) {
   .hero-headline-block{
-    top: 457px;
+    top: 557px;
     left: 12px;
   }
   .hero-headline{
@@ -58,8 +58,8 @@ label{
 
 @media screen and (max-width:767px) {
   .hero-headline-block{
-    top: 749px;
-    left: 120px;
+    top: 871px;
+    left: 160px;
   }
   .hero-headline{
     text-align: center;
@@ -69,18 +69,26 @@ label{
         line-height: 55px;
     
   }
+  .skill-text{
+    padding-block: 3rem;
+  }
   
 }
 @media screen and (max-width:479px) {
   .hero-headline-block{
-    top: 741px;
+    top: 800px !important;
+    left: 120px;
   }
   .skill-text{
     padding-block: 3rem;
   }
 }@media screen and (max-width:600px) {
-  
+  .hero-headline-block{
+    top: 850px;
+    left: 120px;
+  }
   .skill-text{
     padding-block: 3rem;
   }
+
 }

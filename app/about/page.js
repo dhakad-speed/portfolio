@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 export const metadata = {
   title: "About | PortFolio",
   description: "About Page",
@@ -30,10 +31,12 @@ function about() {
           </Link>
         </div>
         <div className="rounded mx-auto ">
-          <img
+          <Image
             src="https://iili.io/3znizAJ.png"
             alt="ayush-img"
-            className="w-100 h-auto"
+            width={500} // set width
+            height={500} // set height
+            className="object-contain rounded"
           />
         </div>
         <div className="flex flex-col gap-y-20 lg:ml-15 mt-6">
