@@ -33,25 +33,63 @@ function Footer() {
             <div className="head text-white  lg:text-5xl lg:font-bold uppercase font-bold">
               Main
             </div>
-            <div className="text-xl">Home</div>
-            <div className="text-xl">About</div>
-            <div className="text-xl">Contact</div>
-            <div className="text-xl">Projects</div>
+            <div className="text-xl">
+              <Link href={"/"}>Home</Link>
+            </div>
+            <div className="text-xl">
+              <Link href={"/about"}>About</Link>
+            </div>
+            <div className="text-xl">
+              <Link href={"/contact"}>Contact</Link>
+            </div>
+            <div className="text-xl">
+              <Link href={"/project"}>Projects</Link>
+            </div>
           </div>
           <div className="flex text-[#ffffffa3] font-bold flex-col md:items-center items-center lg:items-start gap-4">
             <div className="head text-white lg:text-5xl lg:font-bold font-bold  uppercase">
               Follow me
             </div>
-            <div className="text-xl">Instagram</div>
-            <div className="text-xl">Twitter</div>
-            <div className="text-xl">Linkedin</div>
-            <div className="text-xl">Facebook</div>
+            <div className="text-xl">
+              <Link
+                href={
+                  "https://www.instagram.com/asedits98?utm_source=qr&igsh=b29jbDE1bHI3NXNm"
+                }
+              >
+                Instagram
+              </Link>
+            </div>
+            <div className="text-xl">
+              <Link
+                href={
+                  "https://x.com/ASEdits396560?t=cQEzdaO0nQ1a4vIzF1ozww&s=09"
+                }
+              >
+                Twitter
+              </Link>
+            </div>
+            <div className="text-xl">
+              <Link
+                href={
+                  "https://www.linkedin.com/in/ayushdhakad-comp-rcti-dte-0875a0313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                }
+              >
+                Linkedin
+              </Link>
+            </div>
           </div>
         </div>
         <div className="hr h-[1px] mt-[80px] bg-[#333]"></div>
         <div className="flex text-[#ffffffa3]  font-bold lg:gap-x-[390px] justify-center gap-x-[50px] mt-[28px] mr-0 mb-[33px]">
           <div className="design">
-            Designed By <a href=""> Karan Dhakad</a>
+            Designed By{" "}
+            <Link
+              className="underline"
+              href="https://www.instagram.com/_karan_dhakad__?igsh=MWh3N3oyNmptcGEzZQ=="
+            >
+              {" "}
+              Karan Dhakad
+            </Link>
           </div>
           <div className="2023">2025@dhakad-speed</div>
         </div>

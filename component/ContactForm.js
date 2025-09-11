@@ -46,7 +46,9 @@ function ContactForm() {
         <div className="grid md:grid-cols-12 gap-4 text-2xl pt-30 gap-x-25">
           <div className="md:col-span-7 sm:col-span-1">
             {successMessage ? (
-              <div className="bg-[#323232] p-4 text-xl">{successMessage}</div>
+              <div className="dark:bg-[#323232] bg-white dark:text-[#ffffffa3] text-black border border-[#eaeaea] p-4 text-xl">
+                {successMessage}
+              </div>
             ) : (
               <form ref={formRef} onSubmit={handleSubmit(submitForm)}>
                 <div className="input-wrapper flex justify-between md:flex-row flex-col mb-8 gap-3">

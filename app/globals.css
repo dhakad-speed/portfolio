@@ -16,6 +16,14 @@ textarea:focus {
   box-shadow: none !important; /* removes extra shadow */
   border-color: inherit !important; /* keeps whatever border color you applied */
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    -webkit-text-fill-color: inherit !important; /* keeps the text color as normal */
+    transition: background-color 5000s ease-in-out 0s; /* prevents flash of default color */
+}
 label{
   font-size: 14px;
 }
@@ -154,18 +162,7 @@ label{
 span{
   font-size: 12px !important;
 }
-input:-webkit-autofill,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:hover,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px #323232 inset !important; /* dark bg */
 
-  caret-color: #ffffff !important; /* white cursor */
-  border-color: #d1d6d4 !important; /* keeps consistent border */
-}
 .drawer{
   transition: all, transform 400ms !important;
     transform: translateY(0px) translateX(0px) !important;
