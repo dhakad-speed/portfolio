@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -9,7 +9,9 @@ export default function Navbar() {
 
   const isActive = (href) =>
     pathname === href ? "text-white" : "text-[#ffffffa3] hover:text-white";
-
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
   return (
     <nav
       id="nav"
