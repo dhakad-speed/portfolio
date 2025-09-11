@@ -115,7 +115,17 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #323232 inset !important; /* dark bg */
-  -webkit-text-fill-color: #ffffff !important; /* white text */
+
   caret-color: #ffffff !important; /* white cursor */
   border-color: #d1d6d4 !important; /* keeps consistent border */
+}
+.drawer{
+  transition: all, transform 400ms !important;
+    transform: translateY(0px) translateX(0px) !important;
+    border-width: 1px;
+    border-color: black;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: none;
+    border-right-style: none;
 }

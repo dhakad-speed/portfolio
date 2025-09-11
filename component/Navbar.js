@@ -8,19 +8,18 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const isActive = (href) =>
-    pathname === href ? "text-white" : "text-[#ffffffa3] hover:text-white";
+    pathname === href
+      ? "dark:text-white text-black"
+      : "text-[#ffffffa3] hover:text-black";
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
   return (
-    <nav
-      id="nav"
-      className=" shadow-sm fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out"
-    >
+    <nav id="nav" className=" shadow-sm fixed w-full top-0 left-0 z-50 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          <div className="flex-shrink-0 text-2xl text-[#ffffffeb] font-bold">
-            <div className="text-3xl">Ayush.</div>
+          <div className="flex-shrink-0 text-2xl  dark:text-[#ffffffeb] text-black font-bold">
+            <div className="text-3xl ">Ayush.</div>
           </div>
 
           <div className="hidden md:flex lg:inline-block space-x-11">
@@ -64,18 +63,18 @@ export default function Navbar() {
               className="relative flex flex-col justify-between items-center w-8 h-8"
             >
               <span
-                className={`absolute w-6 h-[2px] bg-white rounded transition-all duration-300 ${
+                className={`absolute w-6 h-[2px] dark:bg-white bg-black rounded transition-all duration-300 ${
                   isOpen ? "rotate-45" : "-translate-y-2"
                 }`}
               ></span>
               <span
-                className={`absolute w-6 h-[2px] bg-white rounded transition-all duration-300 ${
+                className={`absolute w-6 h-[2px] dark:bg-white bg-black rounded transition-all duration-300 ${
                   isOpen ? "opacity-0" : "opacity-100"
                 }`}
               ></span>
 
               <span
-                className={`absolute w-6 h-[2px] bg-white rounded transition-all duration-300 ${
+                className={`absolute w-6 h-[2px] dark:bg-white bg-black rounded transition-all duration-300 ${
                   isOpen ? "-rotate-45" : "translate-y-2"
                 }`}
               ></span>
@@ -87,32 +86,45 @@ export default function Navbar() {
       {isOpen && (
         <div
           className={`
-          md:hidden fixed top-16 left-0 w-full bg-[#1f1f1f] shadow-lg flex flex-col items-center
-          transform transition-transform duration-500 ease-in-out
+          md:hidden fixed top-16 py-3 left-0 w-full dark:bg-[#1f1f1f] bg-white  shadow-lg flex flex-col items-center
+          drawer
+          
           ${isOpen ? "translate-y-0" : "-translate-y-full"}
         `}
         >
           <Link
             href="/"
-            className={isActive("/") + " block px-4 py-2 list-none"}
+            className={
+              isActive("/") +
+              " block px-4 py-2 list-none dark:text-white text-black"
+            }
           >
             Home
           </Link>
           <Link
             href="/about"
-            className={isActive("/about") + " block px-4 py-2 list-none"}
+            className={
+              isActive("/about") +
+              " block px-4 py-2 list-none dark:text-white text-black"
+            }
           >
             About
           </Link>
           <Link
             href="/project"
-            className={isActive("/project") + " block px-4 py-2 list-none"}
+            className={
+              isActive("/project") +
+              " block px-4 py-2 list-none dark:text-white text-black"
+            }
           >
             Projects
           </Link>
           <Link
             href="/contact"
-            className={isActive("/contact") + " block px-4 py-2 list-none"}
+            className={
+              isActive("/contact") +
+              " block px-4 py-2 list-none dark:text-white text-black"
+            }
           >
             Contact
           </Link>

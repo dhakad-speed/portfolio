@@ -4,7 +4,11 @@ export const metadata = {
   description: "Project Page",
 };
 function project() {
-  return <div>project</div>;
+  return (
+    <div className="dark:bg-[#323232] dark:text-white bg-white text-black pt-30">
+      project
+    </div>
+  );
 }
 
 export default project;

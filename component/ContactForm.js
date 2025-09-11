@@ -58,7 +58,7 @@ function ContactForm() {
                         maxLength: { value: 50, message: "Name is too long" },
                       })}
                       className={`border dark:bg-[#323232] bg-white  text-black dark:text-white tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%] lg:w-[330px] md:w-full ${
-                        errors.name ? "border-red-500" : "border-[#d1d6fd4]"
+                        errors.name ? "border-red-500" : "border-[#d1d6d4]"
                       }`}
                       type="text"
                       placeholder="Enter your name"

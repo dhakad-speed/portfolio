@@ -4,16 +4,16 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="max-w-7xl  mx-auto lg:mb-[300px] px-4 sm:px-6 lg:px-8 bg-[#1f1f1f] text-white pt-30 items-center"
+      className="bg-white text-black max-w-7xl  mx-auto lg:mb-[300px] px-4 sm:px-6 lg:px-8 dark:bg-[#1f1f1f] dark:text-white pt-30 items-center"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center">
         <div className="flex flex-col gap-y-20 lg:mr-15">
           <div className="intro-text-wrapper">
-            <div className="intro-text text-3xl text-[#ffffffa3] font-bold">
+            <div className="intro-text text-3xl dark:text-[#ffffffa3] text-black font-bold">
               {" "}
               Hey There I'm
             </div>
-            <div className="intro-text-name font-bold text-3xl">
+            <div className="intro-text-name font-bold text-3xl dark:text-[#ffffffa3] text-black">
               Ayush Dhakad
             </div>
           </div>
@@ -29,13 +29,13 @@ export default function Home() {
             alt="ayush-img"
             width={500} // set width
             height={500} // set height
-            className="object-contain rounded"
+            className="object-contain rounded-full dark:border dark:border-transparent border border-black"
             priority
           />
         </div>
         <div className="flex lg:flex-col lg:gap-y-20 lg:ml-15 mt-10 md:flex-row  flex-col  justify-center">
           <div className="skill-wrapper">
-            <div className="skill-text text-[#ffffffa3] font-bold pb-5">
+            <div className="skill-text dark:text-[#ffffffa3] text-black font-bold pb-5">
               A passionate video editor blending creativity with storytelling to
               craft engaging, polished content. Skilled in Premiere Pro, After
               Effects, and DaVinci Resolve with expertise in cutting, color
@@ -45,7 +45,7 @@ export default function Home() {
 
           <Link href={"/contact"}>
             <div className="flex justify-self-center md:py-10 pb-5 lg:mt-[-70px]">
-              <button className="rounded-full w-[146px] h-[146px] bg-[#323232] uppercase">
+              <button className="rounded-full w-[146px] h-[146px] bg-[#9b36f2] text-white dark:bg-[#323232] uppercase">
                 Let's Chat
               </button>
             </div>

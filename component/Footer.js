@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 //   <div className="footer-headline pt-30 lg:text-7xl md:text-5xl lg:leading-[86px] md:leading-[62px] md:text-center text-center text-5xl leading-[48px] font-bold my-0 tracking-[-2.16px] md:w-full md:max-w-[770px] ">
 //     Let’s work together and build cool things!
 //   </div>
@@ -11,14 +13,18 @@ function Footer() {
           <div className="footer-headline pt-30 lg:text-7xl md:text-5xl lg:leading-[86px] md:leading-[62px] md:text-center text-center text-5xl leading-[48px] font-bold my-0 tracking-[-2.16px] md:w-full md:max-w-[770px] ">
             Let’s work together and build cool things!
           </div>
-          <div className="w-[170px] button-block py-[16px] px-[28px] flex items-center dark:bg-[#323232] bg-[#9b36f2]  text-white  gap-2">
-            <button>Get Started</button>
-            <img
-              src="https://cdn.prod.website-files.com/66dc6345d8e5c096070d8fa6/66dc647819b924db4dba0c31_Vector.svg"
-              alt="arrow"
-              className="w-4 h-4"
-            />
-          </div>
+          <Link href={"/contact"}>
+            <div className="w-[170px] button-block py-[16px] px-[28px] flex items-center dark:bg-[#323232] bg-[#9b36f2]  text-white  gap-2">
+              <button>Get Started</button>
+              <Image
+                src="https://cdn.prod.website-files.com/66dc6345d8e5c096070d8fa6/66dc647819b924db4dba0c31_Vector.svg"
+                alt="arrow"
+                width={16}
+                height={16}
+                className="w-auto h-auto"
+              />
+            </div>
+          </Link>
         </div>
 
         <div className="flex flex-row justify-between gap-8 mt-12">
