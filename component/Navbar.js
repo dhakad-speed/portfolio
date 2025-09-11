@@ -9,8 +9,8 @@ export default function Navbar() {
 
   const isActive = (href) =>
     pathname === href
-      ? "dark:text-white text-black"
-      : "text-[#ffffffa3] hover:text-black";
+      ? "dark:text-white text-gray-900"
+      : "dark:text-[#ffffffa3] text-black dark:hover:text-gray-100";
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
@@ -27,7 +27,7 @@ export default function Navbar() {
               href="/"
               className={`${isActive(
                 "/"
-              )} text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-white after:transition-transform after:duration-300 hover:after:scale-x-100`}
+              )} text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 dark:after:bg-white after:bg-[#9b36f2] after:transition-transform after:duration-300 hover:after:scale-x-100`}
             >
               Home
             </Link>
@@ -35,7 +35,7 @@ export default function Navbar() {
               href="/about"
               className={`${isActive(
                 "/about"
-              )} text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-white after:transition-transform after:duration-300 hover:after:scale-x-100`}
+              )} text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 dark:after:bg-white after:bg-[#9b36f2] after:transition-transform after:duration-300 hover:after:scale-x-100`}
             >
               About
             </Link>
@@ -43,7 +43,7 @@ export default function Navbar() {
               href="/project"
               className={`${isActive(
                 "/project"
-              )} text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-white after:transition-transform after:duration-300 hover:after:scale-x-100`}
+              )} text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 dark:after:bg-white after:bg-[#9b36f2] after:transition-transform after:duration-300 hover:after:scale-x-100`}
             >
               Projects
             </Link>
@@ -51,7 +51,7 @@ export default function Navbar() {
               href="/contact"
               className={`${isActive(
                 "/contact"
-              )} text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-white after:transition-transform after:duration-300 hover:after:scale-x-100`}
+              )} text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 dark:after:bg-white after:bg-[#9b36f2] after:transition-transform after:duration-300 hover:after:scale-x-100`}
             >
               Contact
             </Link>
