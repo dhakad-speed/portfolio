@@ -244,7 +244,7 @@ function ContactForm() {
             <div className="flex flex-col pb-5">
               <div className="support text-[14px] font-bold">Support</div>
               <div className="text-2xl dark:text-[#ffffffa3] text-black">
-                asedits098@gmail.com
+                asedits06@gmail.com
               </div>
               <div className="text-2xl dark:text-[#ffffffa3] text-black">
                 76002 96405
