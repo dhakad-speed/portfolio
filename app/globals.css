@@ -32,7 +32,7 @@ label{
 
 .hero-headline-block
 {
-  inset: 521px 20% 0 ;
+  inset: 521px 25% 0 ;
 }
 @media screen and (max-width:991px) {
   .hero-headline-block{
@@ -80,6 +80,7 @@ label{
   }
   .skill-text{
     padding-block: 3rem;
+    text-align: center;
   }
 
 }
@@ -96,7 +97,7 @@ label{
     left: 85px;
   }
   .skill-text{
-    margin-top: 3rem !important;
+    margin-block: 3rem !important;
   }
 } 
 @media screen and (max-width: 414px) {
@@ -112,7 +113,42 @@ label{
     left: 85px;
   }
   .skill-text{
+    margin-block: 3rem !important;
+  }
+} 
+@media screen and (max-width: 430px) {
+  #home{
+    width: 100%;
+  
+  }
+  #nav{
+    width: 100%;
+  }
+  .hero-headline-block{
+    top: 730px !important;
+    left: 85px;
+  }
+  .skill-text{
     margin-top: 3rem !important;
+    padding-block: 0 !important;
+  }
+} 
+@media (min-width:300px) and (max-width: 410px) {
+  #home{
+    width: 100%;
+  
+  }
+  #nav{
+    width: 100%;
+  }
+  .hero-headline-block{
+    top: 640px !important;
+    left: 85px;
+  }
+  .skill-text{
+    margin-block: 1rem !important;
+    padding-block: 0 !important;
+    text-align: center;
   }
 } 
 span{
@@ -145,6 +181,8 @@ select:-webkit-autofill:focus {
     top:431px;
   }
 }
+
+
 @media (max-width:992px) and (min-width:992px) {
   .hero-headline-block{
     top: 557px;
