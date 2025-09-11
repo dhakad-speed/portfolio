@@ -125,3 +125,37 @@ select:-webkit-autofill:focus {
     border-left-style: none;
     border-right-style: none;
 }
+@media (max-width:768px) and (min-width:768px) {
+  .hero-headline-block{
+    top:431px;
+  }
+}
+@media (max-width:992px) and (min-width:992px) {
+  .hero-headline-block{
+    top: 557px;
+    left: 12px;
+  }
+  .hero-headline{
+    letter-spacing: -4.5px;
+        font-size: 52px;
+        line-height: 52px;
+  }
+}
+
+@media (max-width:1024px) and (min-width:1024px) {
+  .hero-headline-block{
+    top: 479px;
+    left: 25%;
+    
+  }
+  .hero-headline{
+    letter-spacing: -4.5px;
+        font-size: 86px;
+        line-height: 52px;
+  }
+  #chat{
+   margin-top: -50px !important;
+   margin-left: 60px !important;
+    }
+  }
+
