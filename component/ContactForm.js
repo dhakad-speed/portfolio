@@ -1,26 +1,26 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+
+import React, { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 function ContactForm() {
   const [successMessage, setSuccessMessage] = useState("");
+  const formRef = useRef(null);
 
   const submitForm = async (data) => {
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      await emailjs.sendForm(
+        "service_kn6vzwn", // Service ID
+        "template_yt4ahip", // Template ID
+        formRef.current,
+        "-YR6E69pxI-LEHwmE" //  Public Key
+      );
 
-      if (res.ok) {
-        setSuccessMessage("Thank you! Your submission has been received!");
-        reset();
-      } else {
-        setSuccessMessage("Failed to send your message. Please try again.");
-      }
+      setSuccessMessage("Thank you! Your submission has been received!");
+      reset(); // reset your form
     } catch (err) {
-      console.error(err);
+      console.error("Failed to send email:", err);
       setSuccessMessage("Something went wrong. Please try again.");
     }
   };
@@ -39,7 +39,7 @@ function ContactForm() {
     <div className="max-w-7xl w-full min-h-screen mx-auto px-4 sm:px-6 lg:px-8 dark:bg-[#1f1f1f] bg-white text-black dark:text-white pt-30 items-center">
       <div className="contact-form-wrapper pt-20">
         <div className="contact headline-block">
-          <div className="contact-headline uppercase lg:font-bold lg:text-[150px] lg:leading-[144px] lg:tracking-[-9.12px] lg:whitespace-nowra md:text-[95px] md:leading-[85px] tracking-[-3px] text-[52px] leading-[60px] ">
+          <div className="contact-headline uppercase lg:font-bold lg:text-[150px] lg:leading-[144px] lg:tracking-[-9.12px] lg:whitespace-nowrap md:text-[95px] md:leading-[85px] tracking-[-3px] text-[52px] leading-[60px] ">
             Contact
           </div>
         </div>
@@ -48,11 +48,12 @@ function ContactForm() {
             {successMessage ? (
               <div className="bg-[#323232] p-4 text-xl">{successMessage}</div>
             ) : (
-              <form onSubmit={handleSubmit(submitForm)}>
+              <form ref={formRef} onSubmit={handleSubmit(submitForm)}>
                 <div className="input-wrapper flex justify-between md:flex-row flex-col mb-8 gap-3">
                   <div className="input-name flex flex-col gap-4">
                     <label htmlFor="name">Name</label>
                     <input
+                      name="name"
                       {...register("name", {
                         required: "Name should not be empty!",
                         maxLength: { value: 50, message: "Name is too long" },
@@ -73,6 +74,7 @@ function ContactForm() {
                   <div className="input-email flex flex-col gap-4">
                     <label htmlFor="email">Email</label>
                     <input
+                      name="email"
                       {...register("email", {
                         required: "email should not be empty",
                         pattern: {
@@ -99,8 +101,8 @@ function ContactForm() {
                   <div className="input-company-name flex flex-col gap-4">
                     <label htmlFor="company-name">Company Name</label>
                     <input
+                      name="companyName"
                       {...register("companyName", {
-                        required: "Company name should not be empty",
                         maxLength: {
                           value: 50,
                           message: "Company name is too long",
@@ -124,8 +126,8 @@ function ContactForm() {
                   <div className="input-url flex flex-col gap-4">
                     <label htmlFor="web-url">Website URL (if any)</label>
                     <input
+                      name="companyUrl"
                       {...register("companyUrl", {
-                        required: "Company url should not be empty",
                         pattern: {
                           value:
                             /^(https?:\/\/)?([\w\d-]+\.){1,}([a-zA-Z]{2,})(\/.*)?$/,
@@ -153,16 +155,19 @@ function ContactForm() {
                     What services are you looking for?(select all that apply)
                   </label>
                   <select
+                    name="typeOfEdit"
+                    defaultValue=""
                     {...register("typeOfEdit", {
-                      validate: (v) =>
-                        v !== "select one" || "Please select a service",
+                      required: "Please select a service",
                     })}
                     id="options"
                     className={`w-full  border dark:bg-[#323232] bg-white text-black dark:text-white tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%] ${
                       errors.typeOfEdit ? "border-red-500" : "border-[#d1d6d4]"
                     }`}
                   >
-                    <option value="select one">select one...</option>
+                    <option value="" disabled>
+                      select one...
+                    </option>
                     <option value="video-edit">Video Edit</option>
                     <option value="photo-edit">Photo Edit</option>
                   </select>
@@ -175,6 +180,10 @@ function ContactForm() {
                 <div className="project-description flex flex-col mt-8 gap-3 ">
                   <label htmlFor="project">Project Description</label>
                   <textarea
+                    onInput={(e) =>
+                      (e.target.value = e.target.value.slice(0, 5000))
+                    }
+                    name="description"
                     {...register("description", {
                       required: "Description is required",
                       maxLength: {
