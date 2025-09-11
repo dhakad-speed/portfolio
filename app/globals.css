@@ -12,7 +12,6 @@
 input:focus,
 select:focus,
 textarea:focus {
-  @apply text-white;
   outline: none !important;   /* removes blue outline */
   box-shadow: none !important; /* removes extra shadow */
   border-color: inherit !important; /* keeps whatever border color you applied */
@@ -21,7 +20,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  @apply text-white;
+
     -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
     -webkit-text-fill-color: inherit !important; /* keeps the text color as normal */
     transition: background-color 5000s ease-in-out 0s; /* prevents flash of default color */
