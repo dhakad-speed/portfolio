@@ -15,7 +15,15 @@ function about() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center pt-3">
         <div className="flex flex-col gap-y-20 lg:mr-15 ">
-          <div className="intro-text-wrapper">
+          <div
+            className="intro-text-wrapper"
+            style={{
+              opacity: "1",
+              transform:
+                "translate3d(0px,0px,0px) scale3d(1,1,1) roatateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg,0deg)",
+              transformStyle: "preserve-3d",
+            }}
+          >
             <div className="intro-text text-3xl dark:text-[#ffffffa3] text-black font-bold">
               {" "}
               Hey There I'm
