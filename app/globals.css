@@ -160,9 +160,7 @@ label{
     text-align: center;
   }
 } 
-span{
-  font-size: 12px !important;
-}
+
 
 .drawer{
   transition: all, transform 400ms !important;
@@ -210,3 +208,4 @@ span{
     }
   }
 
+ 

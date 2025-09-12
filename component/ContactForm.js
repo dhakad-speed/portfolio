@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 import React, { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
@@ -36,15 +37,25 @@ function ContactForm() {
   });
 
   return (
-    <div className="max-w-7xl w-full min-h-screen mx-auto px-4 sm:px-6 lg:px-8 dark:bg-[#1f1f1f] bg-white text-black dark:text-white pt-30 items-center">
+    <motion.div className="max-w-7xl w-full min-h-screen mx-auto px-4 sm:px-6 lg:px-8 dark:bg-[#1f1f1f] bg-white text-black dark:text-white pt-30 items-center">
       <div className="contact-form-wrapper pt-20">
         <div className="contact headline-block">
-          <div className="contact-headline uppercase lg:font-bold lg:text-[150px] lg:leading-[144px] lg:tracking-[-9.12px] lg:whitespace-nowrap md:text-[95px] md:leading-[85px] tracking-[-3px] text-[52px] leading-[60px] ">
+          <motion.div
+            initial={{ opacity: 0, y: 70 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="contact-headline uppercase lg:font-bold lg:text-[150px] lg:leading-[144px] lg:tracking-[-9.12px] lg:whitespace-nowrap md:text-[95px] md:leading-[85px] tracking-[-3px] text-[52px] leading-[60px] "
+          >
             Contact
-          </div>
+          </motion.div>
         </div>
         <div className="grid md:grid-cols-12 gap-4 text-2xl pt-30 gap-x-25">
-          <div className="md:col-span-7 sm:col-span-1">
+          <motion.div
+            initial={{ opacity: 0, y: 93 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="md:col-span-7 sm:col-span-1"
+          >
             {successMessage ? (
               <div className="dark:bg-[#323232] bg-white dark:text-[#ffffffa3] text-black border border-[#eaeaea] p-4 text-xl">
                 {successMessage}
@@ -221,9 +232,14 @@ function ContactForm() {
                 </div>
               </form>
             )}
-          </div>
+          </motion.div>
 
-          <div className="md:col-span-4 sm:col-span-1 flex flex-col gap-y-[80px]">
+          <motion.div
+            initial={{ opacity: 0, y: 93 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="md:col-span-4 sm:col-span-1 flex flex-col gap-y-[80px]"
+          >
             <div className="flex flex-col">
               <div className="location text-[14px] font-bold">
                 Office Location
@@ -250,10 +266,10 @@ function ContactForm() {
                 76002 96405
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
