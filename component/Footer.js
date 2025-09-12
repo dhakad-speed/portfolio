@@ -57,28 +57,28 @@ function Footer() {
                 initial="rest"
                 whileHover="hover"
               >
-                <Link href={"/"}>
+                <Link className="footer-link" href={"/"}>
                   <motion.span
                     variants={{
                       rest: { y: "0%", color: "#fff" },
                       hover: {
-                        y: "-100%", // move up
+                        y: "-100%",
                         transition: { duration: 0.4 },
                       },
                     }}
-                    className="block  text-lg"
+                    className="block  footer-link"
                   >
                     Home
                   </motion.span>
                   <motion.span
                     variants={{
-                      rest: { y: "100%", color: "#9b36f2" }, // hidden below
+                      rest: { y: "100%", color: "#9b36f2" },
                       hover: {
-                        y: "0%", // slide into place
-                        transition: { duration: 0.4, delay: 0.4 }, // delay after first text
+                        y: "0%",
+                        transition: { duration: 0.4, delay: 0.4 },
                       },
                     }}
-                    className="absolute left-0 top-0 block  text-lg"
+                    className="absolute left-0 top-0 block "
                   >
                     Home
                   </motion.span>
@@ -91,28 +91,28 @@ function Footer() {
                 initial="rest"
                 whileHover="hover"
               >
-                <Link href={"/about"}>
+                <Link className="footer-link" href={"/about"}>
                   <motion.span
                     variants={{
                       rest: { y: "0%", color: "#fff" },
                       hover: {
-                        y: "-100%", // move up
+                        y: "-100%",
                         transition: { duration: 0.4 },
                       },
                     }}
-                    className="block  text-lg"
+                    className="block  footer-link"
                   >
                     About
                   </motion.span>
                   <motion.span
                     variants={{
-                      rest: { y: "100%", color: "#9b36f2" }, // hidden below
+                      rest: { y: "100%", color: "#9b36f2" },
                       hover: {
-                        y: "0%", // slide into place
-                        transition: { duration: 0.4, delay: 0.4 }, // delay after first text
+                        y: "0%",
+                        transition: { duration: 0.4, delay: 0.4 },
                       },
                     }}
-                    className="absolute left-0 top-0 block  text-lg"
+                    className="absolute left-0 top-0 block  "
                   >
                     About
                   </motion.span>
@@ -125,28 +125,28 @@ function Footer() {
                 initial="rest"
                 whileHover="hover"
               >
-                <Link href={"/contact"}>
+                <Link className="footer-link" href={"/contact"}>
                   <motion.span
                     variants={{
                       rest: { y: "0%", color: "#fff" },
                       hover: {
-                        y: "-100%", // move up
+                        y: "-100%",
                         transition: { duration: 0.4 },
                       },
                     }}
-                    className="block  text-lg"
+                    className="block footer-link"
                   >
                     Contact
                   </motion.span>
                   <motion.span
                     variants={{
-                      rest: { y: "100%", color: "#9b36f2" }, // hidden below
+                      rest: { y: "100%", color: "#9b36f2" },
                       hover: {
-                        y: "0%", // slide into place
-                        transition: { duration: 0.4, delay: 0.4 }, // delay after first text
+                        y: "0%",
+                        transition: { duration: 0.4, delay: 0.4 },
                       },
                     }}
-                    className="absolute left-0 top-0 block  text-lg"
+                    className="absolute left-0 top-0 block  "
                   >
                     Contact
                   </motion.span>
@@ -159,28 +159,28 @@ function Footer() {
                 initial="rest"
                 whileHover="hover"
               >
-                <Link href={"/project"}>
+                <Link className="footer-link" href={"/project"}>
                   <motion.span
                     variants={{
                       rest: { y: "0%", color: "#fff" },
                       hover: {
-                        y: "-100%", // move up
+                        y: "-100%",
                         transition: { duration: 0.4 },
                       },
                     }}
-                    className="block  text-lg"
+                    className="block  footer-link"
                   >
                     Projects
                   </motion.span>
                   <motion.span
                     variants={{
-                      rest: { y: "100%", color: "#9b36f2" }, // hidden below
+                      rest: { y: "100%", color: "#9b36f2" },
                       hover: {
-                        y: "0%", // slide into place
-                        transition: { duration: 0.4, delay: 0.4 }, // delay after first text
+                        y: "0%",
+                        transition: { duration: 0.4, delay: 0.4 },
                       },
                     }}
-                    className="absolute left-0 top-0 block  text-lg"
+                    className="absolute left-0 top-0 block  "
                   >
                     Projects
                   </motion.span>
@@ -213,23 +213,23 @@ function Footer() {
                     variants={{
                       rest: { y: "0%", color: "#fff" },
                       hover: {
-                        y: "-100%", // move up
+                        y: "-100%",
                         transition: { duration: 0.4 },
                       },
                     }}
-                    className="block  text-lg"
+                    className="block footer-link"
                   >
                     Instagram
                   </motion.span>
                   <motion.span
                     variants={{
-                      rest: { y: "100%", color: "#9b36f2" }, // hidden below
+                      rest: { y: "100%", color: "#9b36f2" },
                       hover: {
-                        y: "0%", // slide into place
-                        transition: { duration: 0.4, delay: 0.4 }, // delay after first text
+                        y: "0%",
+                        transition: { duration: 0.4, delay: 0.4 },
                       },
                     }}
-                    className="absolute left-0 top-0 block  text-lg"
+                    className="absolute left-0 top-0 block  "
                   >
                     Instagram
                   </motion.span>
@@ -252,23 +252,23 @@ function Footer() {
                     variants={{
                       rest: { y: "0%", color: "#fff" },
                       hover: {
-                        y: "-100%", // move up
+                        y: "-100%",
                         transition: { duration: 0.4 },
                       },
                     }}
-                    className="block  text-lg"
+                    className="block footer-link"
                   >
                     Twitter
                   </motion.span>
                   <motion.span
                     variants={{
-                      rest: { y: "100%", color: "#9b36f2" }, // hidden below
+                      rest: { y: "100%", color: "#9b36f2" },
                       hover: {
-                        y: "0%", // slide into place
-                        transition: { duration: 0.4, delay: 0.4 }, // delay after first text
+                        y: "0%",
+                        transition: { duration: 0.4, delay: 0.4 },
                       },
                     }}
-                    className="absolute left-0 top-0 block  text-lg"
+                    className="absolute left-0 top-0 block "
                   >
                     Twitter
                   </motion.span>
@@ -291,23 +291,23 @@ function Footer() {
                     variants={{
                       rest: { y: "0%", color: "#fff" },
                       hover: {
-                        y: "-100%", // move up
+                        y: "-100%",
                         transition: { duration: 0.4 },
                       },
                     }}
-                    className="block  text-lg"
+                    className="block  footer-link"
                   >
                     Linkedin
                   </motion.span>
                   <motion.span
                     variants={{
-                      rest: { y: "100%", color: "#9b36f2" }, // hidden below
+                      rest: { y: "100%", color: "#9b36f2" },
                       hover: {
-                        y: "0%", // slide into place
-                        transition: { duration: 0.4, delay: 0.4 }, // delay after first text
+                        y: "0%",
+                        transition: { duration: 0.4, delay: 0.4 },
                       },
                     }}
-                    className="absolute left-0 top-0 block  text-lg"
+                    className="absolute left-0 top-0 block  "
                   >
                     Linkedin
                   </motion.span>
