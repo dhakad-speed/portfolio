@@ -322,7 +322,7 @@ function Footer() {
             Designed By{" "}
             <Link
               className="underline"
-              href="https://www.instagram.com/_karan_dhakad__?igsh=MWh3N3oyNmptcGEzZQ=="
+              href=" https://www.instagram.com/_karan_dhakad__?igsh=MWh3N3oyNmptcGEzZQ=="
             >
               {" "}
               Karan Dhakad
