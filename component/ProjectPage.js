@@ -53,6 +53,37 @@ function ProjectPage() {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
+            className="lg:col-span-7 col-span-12 order-2 lg:order-1"
+          >
+            <h2 className="lg:text-6xl md:text-4xl text-3xl uppercase font-bold">
+              Montage Edit
+            </h2>
+            <p className="lg:text-xl md:text-base text-sm">
+              Fast-paced, dynamic editing style that combines multiple short
+              clips to showcase progress, energy, or emotion.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="lg:col-span-5 col-span-12 order-1 lg:order-2"
+          >
+            <Image
+              src="https://images.pexels.com/photos/17209322/pexels-photo-17209322.jpeg"
+              width={500}
+              height={200}
+              alt="montage"
+              className="object-contain h-auto"
+            />
+          </motion.div>
+        </div>
+
+        <div className="grid grid-cols-12 items-center gap-8 mb-16">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
             className="lg:col-span-5 col-span-12"
           >
             <Image
@@ -64,7 +95,7 @@ function ProjectPage() {
             />
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
             className="lg:col-span-7 col-span-12"
