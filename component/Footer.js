@@ -16,7 +16,7 @@ function Footer() {
             initial={{ opacity: 0, y: 70 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
-            className="footer-headline lg:pt-30 md:pt-15 pt-5 lg:text-7xl md:text-5xl lg:leading-[86px] md:leading-[62px] md:text-center text-center text-5xl leading-[48px] font-bold my-0 tracking-[-2.16px] md:w-full md:max-w-[770px] "
+            className="footer-headline lg:pt-30 md:pt-15 pt-5 lg:text-7xl md:text-5xl lg:leading-[86px] md:leading-[62px] md:text-center text-center text-[39px] leading-[48px] font-bold my-0 tracking-[-2.16px] md:w-full md:max-w-[770px] "
           >
             Let’s work together and build cool things!
           </motion.div>
@@ -316,7 +316,7 @@ function Footer() {
             </div>
           </motion.div>
         </div>
-        <div className="hr h-[1px] mt-[80px] bg-[#727272]"></div>
+        <div className="hr h-[1px] lg:mt-20 mt-4 bg-[#727272]"></div>
         <div className="flex text-[#ffffffa3]  font-bold lg:gap-x-[390px] flex-col items-center gap-x-[50px] mt-[28px] mr-0 mb-[33px]">
           <div className="design lg:text-xl text-sm">
             Designed By{" "}

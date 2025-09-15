@@ -1,235 +1,247 @@
+
 @import "tailwindcss";
 @import "@fontsource/inter/400.css";
 @import "@fontsource/inter/700.css";
 
-*{
-  font-family: "Inter",sans-serif;
+
+* {
+  font-family: "Inter", sans-serif;
 }
-
-
-
 
 input:focus,
 select:focus,
 textarea:focus {
-  outline: none !important;   /* removes blue outline */
-  box-shadow: none !important; /* removes extra shadow */
-  border-color: inherit !important; /* keeps whatever border color you applied */
+  outline: none !important;      
+  box-shadow: none !important;  
+  border-color: inherit !important; 
 }
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-
-    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
-    -webkit-text-fill-color: inherit !important; /* keeps the text color as normal */
-    transition: background-color 5000s ease-in-out 0s; /* prevents flash of default color */
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-text-fill-color: inherit !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
-label{
+
+label {
   font-size: 14px;
 }
-.hero-headline{
-  
-    letter-spacing: -9.12px;
-    text-transform: uppercase;
-    white-space: nowrap;
-    font-family: Inter, sans-serif;
-    font-size: 145.5px;
-    font-weight: 700;
-    line-height: 144px;
+
+
+.hero-headline {
+  letter-spacing: -9.12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family: Inter, sans-serif;
+  font-size: 145.5px;
+  font-weight: 700;
+  line-height: 144px;
 }
 
-.hero-headline-block
-{
-  inset: 495px 22% auto ;
+.hero-headline-block {
+  inset: 495px 22% auto;
 }
-@media screen and (max-width:991px) {
-  .hero-headline-block{
+
+.drawer {
+  transition: all, transform 400ms !important;
+  transform: translateY(0px) translateX(0px) !important;
+  border-width: 1px;
+  border-color: black;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: none;
+  border-right-style: none;
+}
+
+.footer-link {
+  font-size: 14px !important;
+  color: #b3b3b3 !important;
+}
+
+.select-input {
+  color: gray;
+  letter-spacing: -0.16px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url("https://img.icons8.com/?size=100&id=40021&format=png&color=000000");
+  background-position: 97%;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-attachment: scroll;
+  border-color: #d1d6d4;
+  font-size: 14px !important;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+
+
+/* max-width: 991px */
+@media screen and (max-width: 991px) {
+  .hero-headline-block {
     top: 389px !important;
     left: 12px;
   }
-  .hero-headline{
+  .hero-headline {
     letter-spacing: -4.5px;
-        font-size: 52px;
-        line-height: 52px;
+    font-size: 52px;
+    line-height: 52px;
   }
-  .ayush-img{
+  .ayush-img {
     width: 290px;
     height: 290px;
   }
-  .ayush-img-about{
+  .ayush-img-about {
     width: 338px;
     height: 338px;
   }
-  nav{
+  nav {
     padding: 20px 0px !important;
   }
 }
 
-@media screen and (max-width:767px) {
-  .hero-headline-block{
+/* max-width: 767px */
+@media screen and (max-width: 767px) {
+  .hero-headline-block {
     top: 849px !important;
     left: 165px;
   }
-  .hero-headline{
+  .hero-headline {
     text-align: center;
-        letter-spacing: -3px;
-        white-space: normal;
-        font-size: 63px; 
-        line-height: 55px;
-    
+    letter-spacing: -3px;
+    white-space: normal;
+    font-size: 63px;
+    line-height: 55px;
   }
-  .contact-headline-block{
+  .contact-headline-block {
     margin-bottom: 80px !important;
-    
   }
-  #chat{
+  #chat {
     margin-top: 16px !important;
   }
-.ayush-img{
-  width: 500px;
-  height: 500px;
-}
-.ayush-img-about{
-  width: 400px;
-  height: 400px;
-}
-nav{
-  padding: 20px 0px !important;
-}
-}
-@media screen and (max-width:479px) {
-  .design, .gmail{
-    font-size: 12px !important;
+  .ayush-img {
+    width: 500px;
+    height: 500px;
   }
-  nav{
+  .ayush-img-about {
+    width: 400px;
+    height: 400px;
+  }
+  nav {
     padding: 20px 0px !important;
   }
-  .hero-headline-block{
-    top: 579px !important;
-    left: 120px;
-  }
+}
 
-  .ayush-img{
-    width: 290px !important; 
-    height: 290px !important;
-  }
-  .ayush-img-about{
-    width: 290px !important; 
-    height: 290px !important;
-  }
-  .contact-headline-block{
-    margin-bottom: 80px !important;
-    
-  }
-  .skill-text{
-    padding: 30px 0 0 0 !important;
-     text-align: center;
-   }
-} 
-@media screen and (max-width:600px) {
-  .hero-headline-block{
+/* max-width: 600px */
+@media screen and (max-width: 600px) {
+  .hero-headline-block {
     top: 812px;
     left: 120px;
   }
-  .skill-text{
-   padding: 30px 0 0 0 !important;
+  .skill-text {
+    padding: 30px 0 0 0 !important;
     text-align: center;
   }
-  .contact-headline-block{
+  .contact-headline-block {
     margin-bottom: 80px !important;
-    
   }
 }
 
-
-@media (min-width:300px) and (max-width: 410px) {
-  #home{
-    width: 100%;
-  
+/* max-width: 479px */
+@media screen and (max-width: 479px) {
+  .design,
+  .gmail {
+    font-size: 12px !important;
   }
-  #nav{
-    width: 100%;
+  nav {
+    padding: 20px 0px !important;
   }
-  .hero-headline-block{
-    top: 640px !important;
-    left: 85px;
+  .hero-headline-block {
+    top: 579px !important;
+    left: 120px;
   }
-  .skill-text{
-    margin-block: 1rem !important;
-    padding-block: 0 !important;
+  .ayush-img,
+  .ayush-img-about {
+    width: 290px !important;
+    height: 290px !important;
+  }
+  .contact-headline-block {
+    margin-bottom: 80px !important;
+  }
+  .skill-text {
+    padding: 30px 0 0 0 !important;
     text-align: center;
   }
-} 
-
-
-.drawer{
-  transition: all, transform 400ms !important;
-    transform: translateY(0px) translateX(0px) !important;
-    border-width: 1px;
-    border-color: black;
-    border-top-style: solid;
-    border-bottom-style: solid;
-    border-left-style: none;
-    border-right-style: none;
 }
-@media (max-width:768px) and (min-width:768px) {
-  .hero-headline-block{
-    top:431px;
+
+/* max-width: 412px */
+@media screen and (max-width: 412px) {
+  .design,
+  .gmail {
+    font-size: 12px !important;
   }
-  .contact-headline-block{
+  nav {
+    padding: 20px 0px !important;
+  }
+  .hero-headline-block {
+    top: 579px !important;
+    left: 110px !important;
+  }
+  .ayush-img,
+  .ayush-img-about {
+    width: 290px !important;
+    height: 290px !important;
+  }
+  .contact-headline-block {
     margin-bottom: 80px !important;
-    
+  }
+  .skill-text {
+    padding: 30px 0 0 0 !important;
+    text-align: center;
   }
 }
 
 
-@media (max-width:992px) and (min-width:992px) {
-  .hero-headline-block{
+
+/* 768px */
+@media (max-width: 768px) and (min-width: 768px) {
+  .hero-headline-block {
+    top: 431px;
+  }
+  .contact-headline-block {
+    margin-bottom: 80px !important;
+  }
+}
+
+/* 992px */
+@media (max-width: 992px) and (min-width: 992px) {
+  .hero-headline-block {
     top: 557px;
     left: 12px;
   }
-  .hero-headline{
+  .hero-headline {
     letter-spacing: -4.5px;
-        font-size: 52px;
-        line-height: 52px;
+    font-size: 52px;
+    line-height: 52px;
   }
 }
 
-@media (max-width:1024px) and (min-width:1024px) {
-  .hero-headline-block{
+/*1024px */
+@media (max-width: 1024px) and (min-width: 1024px) {
+  .hero-headline-block {
     top: 479px;
     left: 25%;
-    
   }
-  .hero-headline{
+  .hero-headline {
     letter-spacing: -4.5px;
-        font-size: 86px;
-        line-height: 52px;
+    font-size: 86px;
+    line-height: 52px;
   }
-  #chat{
-   margin-top: -50px !important;
-   margin-left: 60px !important;
-    }
+  #chat {
+    margin-top: -50px !important;
+    margin-left: 60px !important;
   }
-
- .footer-link{
-  font-size: 14px !important;
-  color: #b3b3b3 !important;
- }
-.select-input{
-  color: gray;
-    letter-spacing: -.16px;
-    -webkit-appearance: none;
-    appearance: none;
-    background-color: #fff;
-    background-image: url("https://img.icons8.com/?size=100&id=40021&format=png&color=000000");
-    background-position: 97%;
-    background-repeat: no-repeat;
-    background-size: 16px 16px ;
-    background-attachment: scroll;
-    border-color: #d1d6d4;
-    font-size: 14px !important;
-    font-weight: 400;
-    line-height: 150%;
 }
