@@ -9,20 +9,20 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <motion.div className="w-full  md:min-h-screen lg:min-h-screen bg-[#000] text-white grid">
+    <motion.div className="w-full  min-h-[100%] bg-[#000] text-white grid">
       <div className="mx-auto container p-4">
         <div className="start-block flex flex-col gap-6 items-center">
           <motion.div
             initial={{ opacity: 0, y: 70 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="footer-headline pt-30 lg:text-7xl md:text-5xl lg:leading-[86px] md:leading-[62px] md:text-center text-center text-5xl leading-[48px] font-bold my-0 tracking-[-2.16px] md:w-full md:max-w-[770px] "
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
+            className="footer-headline lg:pt-30 md:pt-15 pt-5 lg:text-7xl md:text-5xl lg:leading-[86px] md:leading-[62px] md:text-center text-center text-5xl leading-[48px] font-bold my-0 tracking-[-2.16px] md:w-full md:max-w-[770px] "
           >
             Let’s work together and build cool things!
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 70 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <Link href={"/contact"}>
@@ -40,12 +40,12 @@ function Footer() {
           </motion.div>
         </div>
 
-        <div className="flex flex-row justify-between gap-8 mt-12">
+        <div className="flex lg:flex-row flex-col justify-between gap-8 mt-12">
           {" "}
           <motion.div
             initial={{ opacity: 0, y: 65 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
             className="flex text-[#ffffffa3]   font-bold  flex-col md:items-center items-center  lg:items-start gap-4"
           >
             <div className="head text-white  lg:text-5xl lg:font-bold uppercase font-bold">
@@ -190,8 +190,8 @@ function Footer() {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 65 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
             className="flex text-[#ffffffa3] font-bold flex-col md:items-center items-center lg:items-start gap-4"
           >
             <div className="head text-white lg:text-5xl lg:font-bold font-bold  uppercase">
@@ -316,19 +316,19 @@ function Footer() {
             </div>
           </motion.div>
         </div>
-        <div className="hr h-[1px] mt-[80px] bg-[#333]"></div>
+        <div className="hr h-[1px] mt-[80px] bg-[#727272]"></div>
         <div className="flex text-[#ffffffa3]  font-bold lg:gap-x-[390px] justify-center gap-x-[50px] mt-[28px] mr-0 mb-[33px]">
-          <div className="design">
+          <div className="design lg:text-xl text-sm">
             Designed By{" "}
             <Link
               className="underline"
-              href=" https://www.instagram.com/_karan_dhakad__?igsh=MWh3N3oyNmptcGEzZQ=="
+              href=" https://www.instagram.com/_karan_dhakad__"
             >
               {" "}
               Karan Dhakad
             </Link>
           </div>
-          <div className="2023">2025@dhakad-speed</div>
+          <div className="gmail lg:text-xl text-sm">2025@dhakad-speed</div>
         </div>
       </div>
     </motion.div>

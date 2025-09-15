@@ -15,7 +15,10 @@ export default function Navbar() {
     setIsOpen(false);
   }, [pathname]);
   return (
-    <nav id="nav" className=" shadow-sm fixed w-full top-0 left-0 z-50 ">
+    <nav
+      id="nav"
+      className=" w-full dark:bg-[#323232] dark:text-white bg-white text-black"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 text-2xl  dark:text-[#ffffffeb] text-black font-bold">
@@ -63,18 +66,18 @@ export default function Navbar() {
               className="relative flex flex-col justify-between items-center w-8 h-8"
             >
               <span
-                className={`absolute w-6 h-[2px] dark:bg-white bg-black rounded transition-all duration-300 ${
+                className={`absolute w-6 h-[2px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
                   isOpen ? "rotate-45" : "-translate-y-2"
                 }`}
               ></span>
               <span
-                className={`absolute w-6 h-[2px] dark:bg-white bg-black rounded transition-all duration-300 ${
+                className={`absolute w-6 h-[2px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
                   isOpen ? "opacity-0" : "opacity-100"
                 }`}
               ></span>
 
               <span
-                className={`absolute w-6 h-[2px] dark:bg-white bg-black rounded transition-all duration-300 ${
+                className={`absolute w-6 h-[2px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
                   isOpen ? "-rotate-45" : "translate-y-2"
                 }`}
               ></span>
@@ -86,7 +89,7 @@ export default function Navbar() {
       {isOpen && (
         <div
           className={`
-          md:hidden fixed top-16 py-3 left-0 w-full dark:bg-[#1f1f1f] bg-white  shadow-lg flex flex-col items-center
+          lg:hidden fixed top-16 py-3 my-2 left-0 w-full dark:bg-[#1f1f1f] bg-white  shadow-lg flex flex-col items-center
           drawer
           
           ${isOpen ? "translate-y-0" : "-translate-y-full"}

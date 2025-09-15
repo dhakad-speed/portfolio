@@ -12,14 +12,14 @@ function ContactForm() {
   const submitForm = async (data) => {
     try {
       await emailjs.sendForm(
-        "service_kn6vzwn", // Service ID
-        "template_yt4ahip", // Template ID
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // Service ID
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, // Template ID
         formRef.current,
-        "-YR6E69pxI-LEHwmE" //  Public Key
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY //  Public Key
       );
 
       setSuccessMessage("Thank you! Your submission has been received!");
-      reset(); // reset your form
+      reset();
     } catch (err) {
       console.error("Failed to send email:", err);
       setSuccessMessage("Something went wrong. Please try again.");
@@ -37,23 +37,23 @@ function ContactForm() {
   });
 
   return (
-    <motion.div className="max-w-7xl w-full min-h-screen mx-auto px-4 sm:px-6 lg:px-8 dark:bg-[#1f1f1f] bg-white text-black dark:text-white pt-30 items-center">
-      <div className="contact-form-wrapper pt-20">
-        <div className="contact headline-block">
+    <motion.div className="max-w-7xl w-full min-h-[100%] mx-auto px-4 sm:px-6 lg:px-8 dark:bg-[#1f1f1f] bg-white text-black dark:text-white lg:pt-10 md:pt-4 pt-5 items-center">
+      <div className="contact-form-wrapper pt-15">
+        <div className="contact-headline-block">
           <motion.div
             initial={{ opacity: 0, y: 70 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="contact-headline uppercase lg:font-bold lg:text-[150px] lg:leading-[144px] lg:tracking-[-9.12px] lg:whitespace-nowrap md:text-[95px] md:leading-[85px] tracking-[-3px] text-[52px] leading-[60px] "
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="contact-headline uppercase font-bold lg:font-bold lg:text-[150px] lg:leading-[144px] lg:tracking-[-9.12px] lg:whitespace-nowrap md:text-[95px] md:leading-[85px] tracking-[-3px] text-[52px] leading-[60px] "
           >
             Contact
           </motion.div>
         </div>
-        <div className="grid md:grid-cols-12 gap-4 text-2xl pt-30 gap-x-25">
+        <div className="grid md:grid-cols-12 gap-4 text-2xl lg:pt-20 md:pt-15 gap-x-25">
           <motion.div
             initial={{ opacity: 0, y: 93 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
             className="md:col-span-7 sm:col-span-1"
           >
             {successMessage ? (
@@ -79,7 +79,7 @@ function ContactForm() {
                       id="name"
                     />
                     {errors.name && (
-                      <span className="text-red-500 text-xm mt-1">
+                      <span className="text-red-500 text-sm mt-1">
                         {errors.name.message}
                       </span>
                     )}
@@ -237,7 +237,7 @@ function ContactForm() {
           <motion.div
             initial={{ opacity: 0, y: 93 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
             className="md:col-span-4 sm:col-span-1 flex flex-col gap-y-[80px]"
           >
             <div className="flex flex-col">

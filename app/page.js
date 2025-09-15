@@ -8,7 +8,7 @@ export default function Home() {
     <motion.div>
       <div
         id="home"
-        className="bg-white text-black max-w-7xl  mx-auto lg:mb-[300px] px-4 sm:px-6 lg:px-8 dark:bg-[#1f1f1f] dark:text-white pt-30 items-center"
+        className="bg-white text-black max-w-7xl  mx-auto lg:mb-[300px] px-4 sm:px-6 lg:px-8 dark:bg-[#1f1f1f] dark:text-white lg:pt-10 md:pt-4 pt-5 items-center"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center">
           <div className="flex flex-col gap-y-20 lg:mr-15">
@@ -53,7 +53,7 @@ export default function Home() {
                 alt="ayush-img"
                 width={500} // set width
                 height={500} // set height
-                className="object-contain rounded-full dark:border dark:border-transparent border border-black"
+                className="object-contain ayush-img rounded-full dark:border dark:border-transparent border border-black"
                 priority
               />
             </motion.div>
@@ -65,7 +65,7 @@ export default function Home() {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="skill-wrapper"
             >
-              <div className="skill-text dark:text-[#ffffffa3] text-black font-bold pb-5">
+              <div className="skill-text dark:text-[#ffffffa3] text-black font-bold ">
                 A passionate video editor blending creativity with storytelling
                 to craft engaging, polished content. Skilled in Premiere Pro,
                 After Effects, and DaVinci Resolve with expertise in cutting,

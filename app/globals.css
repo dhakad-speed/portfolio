@@ -41,11 +41,11 @@ label{
 
 .hero-headline-block
 {
-  inset: 521px 25% 0 ;
+  inset: 495px 22% auto ;
 }
 @media screen and (max-width:991px) {
   .hero-headline-block{
-    top: 557px;
+    top: 389px !important;
     left: 12px;
   }
   .hero-headline{
@@ -53,95 +53,85 @@ label{
         font-size: 52px;
         line-height: 52px;
   }
+  .ayush-img{
+    width: 290px;
+    height: 290px;
+  }
+  .ayush-img-about{
+    width: 338px;
+    height: 338px;
+  }
+  nav{
+    padding: 20px 0px !important;
+  }
 }
 
 @media screen and (max-width:767px) {
   .hero-headline-block{
-    top: 871px;
-    left: 160px;
+    top: 849px !important;
+    left: 165px;
   }
   .hero-headline{
     text-align: center;
         letter-spacing: -3px;
         white-space: normal;
-        font-size: 63px;
+        font-size: 63px; 
         line-height: 55px;
     
   }
-  .skill-text{
-    padding-block: 3rem;
+  .contact-headline-block{
+    margin-bottom: 60px !important;
   }
-  
+  #chat{
+    margin-top: 16px !important;
+  }
+.ayush-img{
+  width: 500px;
+  height: 500px;
+}
+.ayush-img-about{
+  width: 400px;
+  height: 400px;
+}
+nav{
+  padding: 20px 0px !important;
+}
 }
 @media screen and (max-width:479px) {
+  nav{
+    padding: 20px 0px !important;
+  }
   .hero-headline-block{
-    top: 800px !important;
+    top: 579px !important;
     left: 120px;
   }
-  .skill-text{
-    padding-block: 3rem;
+
+  .ayush-img{
+    width: 290px !important; 
+    height: 290px !important;
+  }
+  .ayush-img-about{
+    width: 290px !important; 
+    height: 290px !important;
+  }
+  .contact-headline-block{
+    padding-top: 60px !important;
+    margin-bottom: 80px !important;
   }
 } 
 @media screen and (max-width:600px) {
   .hero-headline-block{
-    top: 850px;
+    top: 812px;
     left: 120px;
   }
   .skill-text{
-    padding-block: 3rem;
+   padding: 30px 0 0 0 ;
     text-align: center;
   }
 
 }
-@media screen and (max-width: 412px) {
-  #home{
-    width: 100%;
-  
-  }
-  #nav{
-    width: 100%;
-  }
-  .hero-headline-block{
-    top: 730px !important;
-    left: 85px;
-  }
-  .skill-text{
-    margin-block: 3rem !important;
-  }
-} 
-@media screen and (max-width: 414px) {
-  #home{
-    width: 100%;
-  
-  }
-  #nav{
-    width: 100%;
-  }
-  .hero-headline-block{
-    top: 730px !important;
-    left: 85px;
-  }
-  .skill-text{
-    margin-block: 3rem !important;
-  }
-} 
-@media screen and (max-width: 430px) {
-  #home{
-    width: 100%;
-  
-  }
-  #nav{
-    width: 100%;
-  }
-  .hero-headline-block{
-    top: 730px !important;
-    left: 85px;
-  }
-  .skill-text{
-    margin-top: 3rem !important;
-    padding-block: 0 !important;
-  }
-} 
+
+
 @media (min-width:300px) and (max-width: 410px) {
   #home{
     width: 100%;
