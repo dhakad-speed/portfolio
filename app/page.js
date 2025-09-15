@@ -14,10 +14,7 @@ export default function Home() {
           <div className="flex flex-col gap-y-20 lg:mr-15">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
-              animate={{
-                opacity: 1,
-                x: 0,
-              }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
               repe
               className="intro-text-wrapper"

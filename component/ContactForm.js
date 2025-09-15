@@ -38,7 +38,7 @@ function ContactForm() {
 
   return (
     <motion.div className="max-w-7xl w-full min-h-[100%] mx-auto px-4 sm:px-6 lg:px-8 dark:bg-[#1f1f1f] bg-white text-black dark:text-white lg:pt-10 md:pt-4 pt-5 items-center">
-      <div className="contact-form-wrapper pt-15">
+      <div className="contact-form-wrapper ">
         <div className="contact-headline-block">
           <motion.div
             initial={{ opacity: 0, y: 70 }}
@@ -174,7 +174,7 @@ function ContactForm() {
                       required: "Please select a service",
                     })}
                     id="options"
-                    className={`w-full  border dark:bg-[#323232] bg-white text-black dark:text-white tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%] ${
+                    className={`w-full select-input  border dark:bg-[#323232] bg-white text-black dark:text-white tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%] ${
                       errors.typeOfEdit ? "border-red-500" : "border-[#d1d6d4]"
                     }`}
                   >

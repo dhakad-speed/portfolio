@@ -21,8 +21,7 @@ function AboutPage() {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="intro-text-wrapper"
           >
             <div className="intro-text text-3xl dark:text-[#ffffffa3] text-black font-bold">
@@ -78,7 +77,7 @@ function AboutPage() {
       <div className="info-element-block grid lg:grid-cols-4 lg:gap-5 grid-cols-2   md:gap-5  pt-15 ">
         <motion.div
           initial={{ opacity: 0, y: 70 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center "
         >
@@ -89,8 +88,8 @@ function AboutPage() {
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 70 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center"
         >
           <div className="info-head text-[72px] font-bold">10+</div>
@@ -101,8 +100,8 @@ function AboutPage() {
 
         <motion.div
           initial={{ opacity: 0, y: 70 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center"
         >
           <div className="info-head text-[72px] font-bold">98%</div>
@@ -112,8 +111,8 @@ function AboutPage() {
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 70 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center"
         >
           <div className="info-head text-[72px] font-bold">10+</div>
@@ -124,7 +123,7 @@ function AboutPage() {
       </div>
       <motion.div
         initial={{ opacity: 0, y: 70 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
         className="flex justify-self-center lg:my-25 mt-10 mb-4"
       >
@@ -133,7 +132,7 @@ function AboutPage() {
       <div className="why-choose-me grid lg:grid-cols-2 grid-cols-1 gap-x-20">
         <motion.div
           initial={{ opacity: 0, y: 70 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
           className="why-choose-me-section-img max-w-[584px] justify-self-center"
         >
@@ -147,7 +146,7 @@ function AboutPage() {
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 70 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
           className="why-choose-me-text-block flex flex-col gap-y-10 mt-[16px]"
         >
