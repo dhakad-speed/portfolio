@@ -16,12 +16,14 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Home | PortFolio",
   description: "Home Page",
+  icons: {
+    icon: "https://iili.io/3znizAJ.png",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head></head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-[#1f1f1f] dark:text-[#ffffffa3] bg-white text-black`}
       >

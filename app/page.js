@@ -48,8 +48,8 @@ export default function Home() {
               <Image
                 src="https://iili.io/3znizAJ.png"
                 alt="ayush-img"
-                width={500} // set width
-                height={500} // set height
+                width={500}
+                height={500}
                 className="object-contain ayush-img rounded-full dark:border dark:border-transparent border border-black"
                 priority
               />

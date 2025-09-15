@@ -9,6 +9,7 @@ const nextConfig = {
       "cdn.prod.website-files.com",
       "images.unsplash.com",
       "images.pexels.com",
+      "i.ibb.co",
     ],
   },
 };
