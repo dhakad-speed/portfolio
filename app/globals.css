@@ -80,7 +80,7 @@ label{
     
   }
   .contact-headline-block{
-    margin-bottom: 60px !important;
+    margin-bottom: 0px !important;
   }
   #chat{
     margin-top: 16px !important;
@@ -116,7 +116,7 @@ nav{
   }
   .contact-headline-block{
     padding-top: 60px !important;
-    margin-bottom: 80px !important;
+    
   }
 } 
 @media screen and (max-width:600px) {
