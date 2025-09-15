@@ -99,6 +99,9 @@ nav{
 }
 }
 @media screen and (max-width:479px) {
+  .design, .gmail{
+    font-size: 12px !important;
+  }
   nav{
     padding: 20px 0px !important;
   }
@@ -119,6 +122,10 @@ nav{
     margin-bottom: 80px !important;
     
   }
+  .skill-text{
+    padding: 30px 0 0 0 !important;
+     text-align: center;
+   }
 } 
 @media screen and (max-width:600px) {
   .hero-headline-block{

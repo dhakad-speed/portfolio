@@ -317,7 +317,7 @@ function Footer() {
           </motion.div>
         </div>
         <div className="hr h-[1px] mt-[80px] bg-[#727272]"></div>
-        <div className="flex text-[#ffffffa3]  font-bold lg:gap-x-[390px] justify-center gap-x-[50px] mt-[28px] mr-0 mb-[33px]">
+        <div className="flex text-[#ffffffa3]  font-bold lg:gap-x-[390px] flex-col items-center gap-x-[50px] mt-[28px] mr-0 mb-[33px]">
           <div className="design lg:text-xl text-sm">
             Designed By{" "}
             <Link
