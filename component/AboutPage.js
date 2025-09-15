@@ -20,6 +20,7 @@ function AboutPage() {
         <div className="flex flex-col gap-y-20 lg:mr-15 ">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="intro-text-wrapper"
@@ -74,14 +75,14 @@ function AboutPage() {
           </div>
         </div>
       </div>
-      <div className="info-element-block grid lg:grid-cols-5 lg:gap-5 grid-cols-2   md:gap-5  pt-15 ">
+      <div className="info-element-block grid lg:grid-cols-4 lg:gap-5 grid-cols-2   md:gap-5  pt-15 ">
         <motion.div
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center "
         >
-          <div className="info-head text-[72px]">3</div>
+          <div className="info-head text-[72px] font-bold">3</div>
           <div className="info-text dark:text-[#ffffffa3] text-black">
             Years of experience
           </div>
@@ -92,7 +93,7 @@ function AboutPage() {
           transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center"
         >
-          <div className="info-head text-[72px]">10+</div>
+          <div className="info-head text-[72px] font-bold">10+</div>
           <div className="info-text dark:text-[#ffffffa3] text-black">
             Projects Completed
           </div>
@@ -104,7 +105,7 @@ function AboutPage() {
           transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center"
         >
-          <div className="info-head text-[72px]">98%</div>
+          <div className="info-head text-[72px] font-bold">98%</div>
           <div className="info-text dark:text-[#ffffffa3] text-black">
             Client satisfied
           </div>
@@ -115,7 +116,7 @@ function AboutPage() {
           transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center"
         >
-          <div className="info-head text-[72px]">10+</div>
+          <div className="info-head text-[72px] font-bold">10+</div>
           <div className="info-text dark:text-[#ffffffa3] text-black">
             Tools Mastered
           </div>
