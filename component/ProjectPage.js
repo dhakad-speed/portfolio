@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 function ProjectPage() {
   return (
     <motion.div className="dark:bg-[#323232] mx-auto max-w-7xl dark:text-white bg-white text-black lg:pt-10 md:pt-5 pt-5 px-3">
-      <div className="container mx-auto lg:mt-5 lg:pb-20 lg:p-0 md:p-0 p-3">
+      <div className="container mx-auto lg:mt-5 lg:pb-20 lg:p-0 md:p-0 px-3">
         <motion.div
           initial={{ opacity: 0, y: 75 }}
           animate={{ opacity: 1, y: 0 }}
@@ -18,7 +18,7 @@ function ProjectPage() {
         <div className="grid grid-cols-12 items-center gap-8 mb-16">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
             className="lg:col-span-5 col-span-12"
           >
@@ -32,7 +32,7 @@ function ProjectPage() {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
             className="lg:col-span-7 col-span-12"
           >
@@ -51,7 +51,7 @@ function ProjectPage() {
         <div className="grid grid-cols-12 items-center gap-8 mb-16">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
             className="lg:col-span-5 col-span-12"
           >
@@ -65,7 +65,7 @@ function ProjectPage() {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
             className="lg:col-span-7 col-span-12"
           >
