@@ -53,26 +53,22 @@ export default function Navbar() {
               aria-label="toggleButton"
               className="relative flex flex-col  items-center w-10 h-10"
             >
-              <motion.span
-                animate={
-                  isOpen
-                    ? { rotate: 45, y: 0, scaleX: 0.9 }
-                    : { rotate: 0, y: -10 }
-                }
-                className="block w-10 h-[3px] bg-black dark:bg-white rounded"
-              />
-              <motion.span
-                animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
-                className="block w-10 h-[3px] bg-black dark:bg-white rounded"
-              />
-              <motion.span
-                animate={
-                  isOpen
-                    ? { rotate: -45, y: 0, scaleX: 0.9 }
-                    : { rotate: 0, y: 10 }
-                }
-                className="block w-10 h-[3px] bg-black dark:bg-white rounded"
-              />
+              <span
+                className={`absolute w-6 h-[2px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
+                  isOpen ? "rotate-45" : "-translate-y-2"
+                }`}
+              ></span>
+              <span
+                className={`absolute w-6 h-[2px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
+                  isOpen ? "opacity-0" : "opacity-100"
+                }`}
+              ></span>
+
+              <span
+                className={`absolute w-6 h-[2px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
+                  isOpen ? "-rotate-45" : "translate-y-2"
+                }`}
+              ></span>
             </button>
           </div>
         </div>
