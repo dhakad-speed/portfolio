@@ -51,7 +51,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               aria-expanded={isOpen}
               aria-label="toggleButton"
-              className="relative flex flex-col  items-center w-10 h-10"
+              className="relative flex flex-col justify-center  items-center w-10 h-10"
             >
               <span
                 className={`absolute w-6 h-[2px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
