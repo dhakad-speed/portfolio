@@ -219,9 +219,13 @@ function ContactForm() {
                   )}
                 </div>
                 <div className="div mt-4 dark:bg-[#323232] text-white bg-[#9b36f2] justify-center flex gap-x-2 w-[176px] items-center py-[16px] px-[20px] mb-5  rounded-[1px]  text-[14px]">
-                  <button disabled={isSubmitting} type="submit">
-                    {isSubmitting ? "Please wait... " : "  Send it over"}
-                  </button>
+                  <input
+                    type="submit"
+                    disabled={isSubmitting}
+                    value={isSubmitting ? "Please wait..." : "Send it over"}
+                    id="chat"
+                  />
+
                   <Image
                     src="https://cdn.prod.website-files.com/66dc6345d8e5c096070d8fa6/66dc647819b924db4dba0c31_Vector.svg"
                     alt="arrow"
