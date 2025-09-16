@@ -107,6 +107,9 @@ label {
   .intro-text{
     font-weight: 400;
   }
+  .skill-text{
+    font-size: 15px !important;
+  }
 }
 
 /* max-width: 767px */
