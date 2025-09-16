@@ -225,7 +225,6 @@ function ContactForm() {
                     type="submit"
                     disabled={isSubmitting}
                     value={isSubmitting ? "Please wait..." : "Send it over"}
-                    id="chat"
                   />
 
                   <Image
