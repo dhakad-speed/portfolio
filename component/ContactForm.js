@@ -174,7 +174,7 @@ function ContactForm() {
                       required: "Please select a service",
                     })}
                     id="options"
-                    className={`w-full select-input  border dark:bg-[#323232] bg-white  tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%] ${
+                    className={`w-full select-input  border dark:bg-[#323232] bg-white text-[#0c0407] dark:text-[#fff]  tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%] ${
                       errors.typeOfEdit ? "border-red-500" : "border-[#d1d6d4]"
                     }`}
                   >
