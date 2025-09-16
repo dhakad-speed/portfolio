@@ -71,7 +71,7 @@ function ContactForm() {
                         required: "Name should not be empty!",
                         maxLength: { value: 50, message: "Name is too long" },
                       })}
-                      className={`border dark:bg-[#323232] bg-white  text-black dark:text-white tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%] lg:w-[330px] md:w-full ${
+                      className={`border dark:bg-[#323232] bg-white   tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%] lg:w-[330px] md:w-full ${
                         errors.name ? "border-red-500" : "border-[#d1d6d4]"
                       }`}
                       type="text"
@@ -96,7 +96,7 @@ function ContactForm() {
                           message: "Invalid email",
                         },
                       })}
-                      className={`lg:w-[330px] md:w-full  border text-black bg-white dark:bg-[#323232] dark:text-white tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%]  ${
+                      className={`lg:w-[330px] md:w-full  border bg-white dark:bg-[#323232]  tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%]  ${
                         errors?.email ? "border-red-500" : "border-[#d1d6d4]"
                       }`}
                       type="email"
@@ -121,7 +121,7 @@ function ContactForm() {
                           message: "Company name is too long",
                         },
                       })}
-                      className={`lg:w-[330px] md:w-full  border dark:bg-[#323232] bg-white text-black dark:text-white tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%]  ${
+                      className={`lg:w-[330px] md:w-full  border dark:bg-[#323232] bg-white  tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%]  ${
                         errors.companyName
                           ? "border-red-500"
                           : "border-[#d1d6d4]"
@@ -147,7 +147,7 @@ function ContactForm() {
                           message: "Invalid URL",
                         },
                       })}
-                      className={`lg:w-[330px] md:w-full  border dark:bg-[#323232] text-black bg-white dark:text-white tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%] ${
+                      className={`lg:w-[330px] md:w-full  border dark:bg-[#323232]  bg-white  tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%] ${
                         errors.companyUrl
                           ? "border-red-500"
                           : "border-[#d1d6d4]"
@@ -174,7 +174,7 @@ function ContactForm() {
                       required: "Please select a service",
                     })}
                     id="options"
-                    className={`w-full select-input  border dark:bg-[#323232] bg-white text-black dark:text-white tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%] ${
+                    className={`w-full select-input  border dark:bg-[#323232] bg-white  tracking-[-.16px] h-auto min-h-[56px] mb-0 py-[16px] px-[20px] text-[14px] font-medium leading-[150%] ${
                       errors.typeOfEdit ? "border-red-500" : "border-[#d1d6d4]"
                     }`}
                   >
@@ -207,7 +207,7 @@ function ContactForm() {
                     placeholder="Write Here"
                     id="project"
                     className={`w-full text-[14px] border  min-h-[11.25rem] mb-0 py-[16px] px-[20px] overflow-auto h-auto 
-                    bg-white text-black dark:bg-[#323232] dark:text-white 
+                    bg-white dark:bg-[#323232] 
                     ${
                       errors.description ? "border-red-500" : "border-[#d1d6d4]"
                     }`}

@@ -60,7 +60,7 @@ export default function Home() {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="skill-wrapper"
             >
-              <div className="skill-text dark:text-[#ffffffa3] text-black font-bold ">
+              <div className="skill-text  font-bold ">
                 A passionate video editor blending creativity with storytelling
                 to craft engaging, polished content. Skilled in Premiere Pro,
                 After Effects, and DaVinci Resolve with expertise in cutting,

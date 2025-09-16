@@ -41,7 +41,7 @@ label {
 }
 
 .hero-headline-block {
-  inset: 495px 22% auto;
+  inset: 460px 22% auto;
 }
 .skill-text{
   color: #666 !important;
@@ -136,9 +136,11 @@ label {
     width: 400px;
     height: 400px;
   }
-  nav {
-    padding: 20px 0px !important;
+  #nav {
+    padding: 20px 16px !important;
   }
+
+  
 }
 
 /* max-width: 600px */
@@ -158,6 +160,9 @@ label {
   }
   .intro-text{
     font-weight: 500;
+  }
+  #nav{
+    padding: 20px 10px !important;
   }
 }
 

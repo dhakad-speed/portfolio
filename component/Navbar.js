@@ -13,7 +13,7 @@ export default function Navbar() {
   const isActive = (href) =>
     pathname === href
       ? "dark:text-white text-gray-900"
-      : "dark:text-[#ffffffa3] text-black dark:hover:text-gray-100";
+      : "dark:text-[#ffffffa3] text-[#0c0407] dark:hover:text-gray-100";
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
@@ -26,11 +26,11 @@ export default function Navbar() {
   return (
     <nav
       id="nav"
-      className=" w-full dark:bg-[#323232] dark:text-white bg-white text-black"
+      className=" w-full dark:bg-[#323232] dark:text-white bg-white text-[#0c0407]"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto  lg:px-8 md:px-4 nav-menu">
         <div className="flex justify-between h-16 items-center">
-          <div className="flex-shrink-0 text-2xl  dark:text-[#ffffffeb] text-black font-bold">
+          <div className="flex-shrink-0 text-2xl font-bold">
             <div className="text-3xl ">Ayush.</div>
           </div>
 
@@ -95,9 +95,7 @@ export default function Navbar() {
               <Link
                 key={href}
                 href={href}
-                className={`${isActive(
-                  href
-                )} block px-4 py-2 list-none dark:text-white text-black`}
+                className={`${isActive(href)} block px-4 py-2 list-none `}
               >
                 {label}
               </Link>
