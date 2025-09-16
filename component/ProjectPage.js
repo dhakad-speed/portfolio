@@ -27,6 +27,7 @@ function ProjectPage() {
               width={500}
               height={200}
               alt="cinematic"
+              style={{ height: "auto" }}
               className="object-contain"
             />
           </motion.div>
@@ -74,7 +75,8 @@ function ProjectPage() {
               width={500}
               height={200}
               alt="montage"
-              className="object-contain h-auto"
+              style={{ height: "auto" }}
+              className="object-contain"
             />
           </motion.div>
         </div>
@@ -91,7 +93,8 @@ function ProjectPage() {
               width={500}
               height={200}
               alt="commercial"
-              className="object-contain h-auto"
+              style={{ height: "auto" }}
+              className="object-contain"
             />
           </motion.div>
           <motion.div

@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { AnimatePresence, easeOut, motion } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +15,12 @@ export default function Navbar() {
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/project", label: "Projects" },
+    { href: "/contact", label: "Contact" },
+  ];
   return (
     <nav
       id="nav"
@@ -26,113 +33,80 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex lg:inline-block space-x-11">
-            <Link
-              href="/"
-              className={`${isActive(
-                "/"
-              )} text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 dark:after:bg-white after:bg-[#9b36f2] after:transition-transform after:duration-300 hover:after:scale-x-100`}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className={`${isActive(
-                "/about"
-              )} text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 dark:after:bg-white after:bg-[#9b36f2] after:transition-transform after:duration-300 hover:after:scale-x-100`}
-            >
-              About
-            </Link>
-            <Link
-              href="/project"
-              className={`${isActive(
-                "/project"
-              )} text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 dark:after:bg-white after:bg-[#9b36f2] after:transition-transform after:duration-300 hover:after:scale-x-100`}
-            >
-              Projects
-            </Link>
-            <Link
-              href="/contact"
-              className={`${isActive(
-                "/contact"
-              )} text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 dark:after:bg-white after:bg-[#9b36f2] after:transition-transform after:duration-300 hover:after:scale-x-100`}
-            >
-              Contact
-            </Link>
+            {links.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={`${isActive(
+                  href
+                )}  text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 dark:after:bg-white after:bg-[#9b36f2] after:transition-transform after:duration-300 hover:after:scale-x-100`}
+              >
+                {label}
+              </Link>
+            ))}
           </div>
 
-          <div className="md:hidden flex items-center mt-6">
+          <div className="md:hidden flex items-center ">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="relative flex flex-col justify-between items-center w-8 h-8"
+              aria-expanded={isOpen}
+              aria-label="toggleButton"
+              className="relative flex flex-col  items-center w-10 h-10"
             >
-              <span
-                className={`absolute w-6 h-[2px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
-                  isOpen ? "rotate-45" : "-translate-y-2"
-                }`}
-              ></span>
-              <span
-                className={`absolute w-6 h-[2px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
-                  isOpen ? "opacity-0" : "opacity-100"
-                }`}
-              ></span>
-
-              <span
-                className={`absolute w-6 h-[2px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
-                  isOpen ? "-rotate-45" : "translate-y-2"
-                }`}
-              ></span>
+              <motion.span
+                animate={
+                  isOpen
+                    ? { rotate: 45, y: 0, scaleX: 0.9 }
+                    : { rotate: 0, y: -10 }
+                }
+                className="block w-10 h-[3px] bg-black dark:bg-white rounded"
+              />
+              <motion.span
+                animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
+                className="block w-10 h-[3px] bg-black dark:bg-white rounded"
+              />
+              <motion.span
+                animate={
+                  isOpen
+                    ? { rotate: -45, y: 0, scaleX: 0.9 }
+                    : { rotate: 0, y: 10 }
+                }
+                className="block w-10 h-[3px] bg-black dark:bg-white rounded"
+              />
             </button>
           </div>
         </div>
       </div>
 
-      {isOpen && (
-        <div
-          className={`
-          lg:hidden fixed top-16 py-3 my-2 left-0 w-full dark:bg-[#1f1f1f] bg-white  shadow-lg flex flex-col items-center
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ y: "-100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: "-100%", opacity: 0 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            className={`
+                fixed top-20 left-0 right-0 z-50
+          lg:hidden  w-full dark:bg-[#1f1f1f] bg-white  shadow-lg flex flex-col items-center
           drawer
           
           ${isOpen ? "translate-y-0" : "-translate-y-full"}
         `}
-        >
-          <Link
-            href="/"
-            className={
-              isActive("/") +
-              " block px-4 py-2 list-none dark:text-white text-black"
-            }
           >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className={
-              isActive("/about") +
-              " block px-4 py-2 list-none dark:text-white text-black"
-            }
-          >
-            About
-          </Link>
-          <Link
-            href="/project"
-            className={
-              isActive("/project") +
-              " block px-4 py-2 list-none dark:text-white text-black"
-            }
-          >
-            Projects
-          </Link>
-          <Link
-            href="/contact"
-            className={
-              isActive("/contact") +
-              " block px-4 py-2 list-none dark:text-white text-black"
-            }
-          >
-            Contact
-          </Link>
-        </div>
-      )}
+            {links.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={`${isActive(
+                  href
+                )} block px-4 py-2 list-none dark:text-white text-black`}
+              >
+                {label}
+              </Link>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
