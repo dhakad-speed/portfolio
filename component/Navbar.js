@@ -82,7 +82,7 @@ export default function Navbar() {
             initial={{ y: "-100%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: "-100%", opacity: 0 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
+            transition={{ duration: 0.4, ease: "ease" }}
             className={`
                 absolute top-20 left-0 right-0 z-50
           lg:hidden  w-full dark:bg-[#1f1f1f] bg-white  shadow-lg flex flex-col items-center
