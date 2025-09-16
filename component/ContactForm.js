@@ -37,7 +37,7 @@ function ContactForm() {
   });
 
   return (
-    <motion.div className="max-w-7xl w-full min-h-[100%] mx-auto px-4 sm:px-6 lg:px-8 dark:bg-[#1f1f1f] bg-white text-black dark:text-white lg:pt-10 md:pt-4 pt-5 items-center">
+    <motion.div className="max-w-7xl w-full min-h-[100%] mx-auto px-4 sm:px-6 lg:px-8 dark:bg-[#1f1f1f] bg-white text-[#0c0407] dark:text-white lg:pt-10 md:pt-4 pt-5 items-center">
       <div className="contact-form-wrapper ">
         <div className="contact-headline-block">
           <motion.div
@@ -57,7 +57,7 @@ function ContactForm() {
             className="md:col-span-7 sm:col-span-1"
           >
             {successMessage ? (
-              <div className="dark:bg-[#323232] bg-white dark:text-[#ffffffa3] text-black border border-[#eaeaea] p-4 text-xl">
+              <div className="dark:bg-[#323232] bg-white  border border-[#eaeaea] p-4 text-xl">
                 {successMessage}
               </div>
             ) : (
@@ -244,27 +244,17 @@ function ContactForm() {
               <div className="location text-[14px] font-bold">
                 Office Location
               </div>
-              <div className="text-2xl dark:text-[#ffffffa3] text-black">
-                JagatPur Chandlodiya
-              </div>
+              <div className="text-2xl">JagatPur Chandlodiya</div>
             </div>
             <div className="flex flex-col">
               <div className="time text-[14px] font-bold">Office Time</div>
-              <div className="text-2xl dark:text-[#ffffffa3] text-black">
-                Monday - Sunday
-              </div>
-              <div className="text-2xl dark:text-[#ffffffa3] text-black">
-                8am - 5pm
-              </div>
+              <div className="text-2xl">Monday - Sunday</div>
+              <div className="text-2xl">8am - 5pm</div>
             </div>
             <div className="flex flex-col pb-5">
               <div className="support text-[14px] font-bold">Support</div>
-              <div className="text-2xl dark:text-[#ffffffa3] text-black">
-                asedits06@gmail.com
-              </div>
-              <div className="text-2xl dark:text-[#ffffffa3] text-black">
-                76002 96405
-              </div>
+              <div className="text-2xl ">asedits06@gmail.com</div>
+              <div className="text-2xl ">76002 96405</div>
             </div>
           </motion.div>
         </div>

@@ -5,13 +5,13 @@ import Link from "next/link";
 import Image from "next/image";
 function AboutPage() {
   return (
-    <motion.div className="max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8 dark:bg-[#1f1f1f] bg-white text-black dark:text-white lg:pt-10 md:pt-4 pt-5 items-center">
+    <motion.div className="max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8 dark:bg-[#1f1f1f] bg-white text-[#0c0407] dark:text-white lg:pt-10 md:pt-4 pt-5 items-center">
       <div className="aboutme-headline">
         <motion.div
           initial={{ opacity: 0, y: -70 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="about dark:text-[#fff] text-black  lg:tracking-[-9.12px] lg:uppercase lg:whitespace-nowrap lg:leading-[144px] lg:font-bold lg:text-[145.5px] md:uppercase  md:font-bold md:tracking-[-4.5px] md:text-[52px] md:leading-[52px]  tracking-[-3px] whitespace-nowrap text-[63px] leading-[55px] uppercase font-bold"
+          className="about dark:text-[#fff] text-[#0c0407]  lg:tracking-[-9.12px] lg:uppercase lg:whitespace-nowrap lg:leading-[144px] lg:font-bold lg:text-[145.5px] md:uppercase  md:font-bold md:tracking-[-4.5px] md:text-[52px] md:leading-[52px]  tracking-[-3px] whitespace-nowrap text-[63px] leading-[55px] uppercase font-bold"
         >
           about me
         </motion.div>
@@ -24,9 +24,7 @@ function AboutPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="intro-text-wrapper"
           >
-            <div className="intro-text text-3xl dark:text-[#ffffffa3] text-black font-bold">
-              Hey There I'm
-            </div>
+            <div className="intro-text text-3xl  font-bold">Hey There I'm</div>
             <div className="intro-text-name font-bold text-3xl">
               Ayush Dhakad
             </div>
@@ -64,7 +62,7 @@ function AboutPage() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="skill-text dark:text-[#ffffffa3] text-black font-bold"
+              className="skill-text font-bold"
             >
               A passionate video editor blending creativity with storytelling to
               craft engaging, polished content. Skilled in Premiere Pro, After
@@ -82,9 +80,7 @@ function AboutPage() {
           className="flex flex-col items-center "
         >
           <div className="info-head text-[72px] font-bold">3</div>
-          <div className="info-text dark:text-[#ffffffa3] text-black">
-            Years of experience
-          </div>
+          <div className="info-text">Years of experience</div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 70 }}
@@ -93,9 +89,7 @@ function AboutPage() {
           className="flex flex-col items-center"
         >
           <div className="info-head text-[72px] font-bold">10+</div>
-          <div className="info-text dark:text-[#ffffffa3] text-black">
-            Projects Completed
-          </div>
+          <div className="info-text">Projects Completed</div>
         </motion.div>
 
         <motion.div
@@ -105,9 +99,7 @@ function AboutPage() {
           className="flex flex-col items-center"
         >
           <div className="info-head text-[72px] font-bold">98%</div>
-          <div className="info-text dark:text-[#ffffffa3] text-black">
-            Client satisfied
-          </div>
+          <div className="info-text ">Client satisfied</div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 70 }}
@@ -116,9 +108,7 @@ function AboutPage() {
           className="flex flex-col items-center"
         >
           <div className="info-head text-[72px] font-bold">10+</div>
-          <div className="info-text dark:text-[#ffffffa3] text-black">
-            Tools Mastered
-          </div>
+          <div className="info-text">Tools Mastered</div>
         </motion.div>
       </div>
       <motion.div
@@ -127,7 +117,9 @@ function AboutPage() {
         transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
         className="flex justify-self-center lg:my-25 mt-10 mb-4"
       >
-        <div className="lg:text-6xl text-4xl font-bold ">Why Choose Me?</div>
+        <div className="lg:text-6xl text-4xl font-bold dark:text-white text-[#0c0407]">
+          Why Choose Me?
+        </div>
       </motion.div>
       <div className="why-choose-me grid lg:grid-cols-2 grid-cols-1 gap-x-20">
         <motion.div
@@ -151,12 +143,12 @@ function AboutPage() {
           className="why-choose-me-text-block flex flex-col gap-y-10 mt-[16px]"
         >
           <div className="gap-x-30 flex">
-            <div className="why-choose-num text-2xl">(01)</div>
+            <div className="why-choose-num text-2xl md:block hidden">(01)</div>
             <div className="why-choose-text-block">
               <div className="block-head text-2xl font-bold">
                 Expert in tools
               </div>
-              <div className="block-text dark:text-[#ffffffa3] lg:text-xl text-[14px] font-bold">
+              <div className="block-text  text-[#4c4c4c] lg:text-xl text-[14px] font-bold">
                 Expert in video editing tools, I craft seamless, high-quality
                 visuals that engage and inspire. Every project is delivered with
                 precision, creativity, and a polished finish.
@@ -164,12 +156,12 @@ function AboutPage() {
             </div>
           </div>
           <div className="gap-x-30 flex">
-            <div className="why-choose-num text-2xl">(02)</div>
+            <div className="why-choose-num text-2xl md:block hidden">(02)</div>
             <div className="why-choose-text-block">
               <div className="block-head text-2xl font-bold">
                 Creative ideas
               </div>
-              <div className="block-text dark:text-[#ffffffa3] lg:text-xl text-[14px] font-bold">
+              <div className="block-text  text-[#4c4c4c] lg:text-xl text-[14px] font-bold">
                 From smooth transitions to cinematic effects, I transform simple
                 clips into visually stunning stories that leave a lasting
                 impact.
@@ -177,12 +169,12 @@ function AboutPage() {
             </div>
           </div>
           <div className="gap-x-30 flex">
-            <div className="why-choose-num text-2xl">(03)</div>
+            <div className="why-choose-num text-2xl md:block hidden">(03)</div>
             <div className="why-choose-text-block">
               <div className="block-head text-2xl font-bold">
                 Proven results
               </div>
-              <div className="block-text lg:text-xl text-[14px] dark:text-[#ffffffa3] font-bold">
+              <div className="block-text lg:text-xl text-[14px] text-[#4c4c4c] font-bold">
                 Every frame is crafted with precision to achieve professional
                 quality and proven success in reaching audience goals.
               </div>

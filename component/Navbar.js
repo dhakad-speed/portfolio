@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { useClickAway } from "react-use";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, easeOut, motion } from "framer-motion";
@@ -7,7 +8,8 @@ import { AnimatePresence, easeOut, motion } from "framer-motion";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-
+  const ref = useRef(null);
+  useClickAway(ref, () => setIsOpen(false));
   const isActive = (href) =>
     pathname === href
       ? "dark:text-white text-gray-900"
@@ -46,7 +48,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="md:hidden flex items-center ">
+          <div ref={ref} className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               aria-expanded={isOpen}
@@ -82,7 +84,7 @@ export default function Navbar() {
             exit={{ y: "-100%", opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className={`
-                fixed top-20 left-0 right-0 z-50
+                absolute top-20 left-0 right-0 z-50
           lg:hidden  w-full dark:bg-[#1f1f1f] bg-white  shadow-lg flex flex-col items-center
           drawer
           

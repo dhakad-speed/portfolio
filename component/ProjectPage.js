@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 function ProjectPage() {
   return (
-    <motion.div className="dark:bg-[#323232] mx-auto max-w-7xl dark:text-white bg-white text-black lg:pt-10 md:pt-5 pt-5 px-4">
+    <motion.div className="dark:bg-[#323232] mx-auto max-w-7xl dark:text-white bg-white text-[#0c0407] lg:pt-10 md:pt-5 pt-5 px-4">
       <div className="container mx-auto lg:mt-5 lg:pb-20 lg:p-0 md:p-0 ">
         <motion.div
           initial={{ opacity: 0, y: 75 }}

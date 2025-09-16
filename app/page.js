@@ -8,7 +8,7 @@ export default function Home() {
     <motion.div>
       <div
         id="home"
-        className="bg-white text-black max-w-7xl  mx-auto lg:mb-[300px] px-4 sm:px-6 lg:px-8 dark:bg-[#1f1f1f] dark:text-white lg:pt-10 md:pt-4 pt-5 items-center"
+        className="bg-white text-[#0c0407] max-w-7xl  mx-auto lg:mb-[300px] px-4 sm:px-6 lg:px-8 dark:bg-[#1f1f1f] dark:text-white lg:pt-10 md:pt-4 pt-5 items-center"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center">
           <div className="flex flex-col gap-y-20 lg:mr-15">
@@ -19,10 +19,8 @@ export default function Home() {
               repe
               className="intro-text-wrapper"
             >
-              <div className="intro-text text-3xl dark:text-[#ffffffa3] text-black font-bold">
-                Hey There I'm
-              </div>
-              <div className="intro-text-name font-bold text-3xl dark:text-[#ffffffa3] text-black">
+              <div className="intro-text text-3xl font-bold">Hey There I'm</div>
+              <div className="intro-text-name font-bold text-3xl">
                 Ayush Dhakad
               </div>
             </motion.div>
@@ -30,7 +28,7 @@ export default function Home() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="current-available w-[206px]"
+              className="current-available w-[206px] md:block hidden"
             >
               <div className="current-text text-xl ">
                 Currently available for freelance projects 🚀
@@ -77,7 +75,7 @@ export default function Home() {
             >
               {" "}
               <Link href={"/contact"}>
-                <div className="flex justify-self-center md:py-10 pb-5 lg:mt-[-70px]">
+                <div className="flex justify-self-center pb-5 lg:mt-[-70px]">
                   <button
                     id="chat"
                     className="rounded-full w-[146px] h-[146px] bg-[#9b36f2] text-white dark:bg-[#323232] uppercase"
@@ -95,7 +93,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 style={{ transformStyle: "preserve-3d" }}
-                className="hero-headline dark:text-[#fff] text-black uppercase"
+                className="hero-headline  uppercase"
               >
                 video editor
               </motion.div>

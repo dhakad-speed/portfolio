@@ -43,6 +43,10 @@ label {
 .hero-headline-block {
   inset: 495px 22% auto;
 }
+.skill-text{
+  color: #666 !important;
+    font-weight: 400 !important;
+}
 
 .drawer {
   transition: all, transform 400ms !important;
@@ -100,12 +104,15 @@ label {
   nav {
     padding: 20px 0px !important;
   }
+  .intro-text{
+    font-weight: 400;
+  }
 }
 
 /* max-width: 767px */
 @media screen and (max-width: 767px) {
   .hero-headline-block {
-    top: 849px !important;
+    top: 710px !important;
     left: 165px;
   }
   .hero-headline {
@@ -137,15 +144,20 @@ label {
 /* max-width: 600px */
 @media screen and (max-width: 600px) {
   .hero-headline-block {
-    top: 812px;
+    top: 650px !important ;
     left: 120px;
   }
   .skill-text {
     padding: 30px 0 0 0 !important;
     text-align: center;
+    font-size: 15px !important;
+    
   }
   .contact-headline-block {
     margin-bottom: 80px !important;
+  }
+  .intro-text{
+    font-weight: 500;
   }
 }
 
@@ -159,7 +171,7 @@ label {
     padding: 20px 0px !important;
   }
   .hero-headline-block {
-    top: 579px !important;
+    top: 445px !important;
     left: 120px;
   }
   .ayush-img,
@@ -173,6 +185,11 @@ label {
   .skill-text {
     padding: 30px 0 0 0 !important;
     text-align: center;
+    
+    font-size: 15px !important;
+  }
+  .intro-text{
+    font-weight: 500;
   }
   .footer-headline{
     font-size: 40px !important;
@@ -189,8 +206,8 @@ label {
     padding: 20px 0px !important;
   }
   .hero-headline-block {
-    top: 599px !important;
-    left: 80px !important;
+    top: 440px !important;
+    left: 88px !important;
   }
   .ayush-img,
   .ayush-img-about {
@@ -203,9 +220,18 @@ label {
   .skill-text {
     padding: 30px 0 0 0 !important;
     text-align: center;
+    font-size: 15px !important;
+    
   }
   .footer-headline{
     font-size: 40px !important;
+    }
+    .intro-text{
+      font-weight: 500;
+      color: #0c0407 !important;
+    }
+    .intro-text-wrapper{
+      color: #0c0407 !important;
     }
 }
 
