@@ -7,7 +7,7 @@ dist/
 build/
 
 # environment variables
-.env
+*.env*
 .env.local
 .env.production
 .env.development
