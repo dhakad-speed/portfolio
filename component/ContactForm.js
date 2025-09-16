@@ -66,6 +66,7 @@ function ContactForm() {
                   <div className="input-name flex flex-col gap-4">
                     <label htmlFor="name">Name</label>
                     <input
+                      autoComplete="given-name"
                       name="name"
                       {...register("name", {
                         required: "Name should not be empty!",
@@ -87,6 +88,7 @@ function ContactForm() {
                   <div className="input-email flex flex-col gap-4">
                     <label htmlFor="email">Email</label>
                     <input
+                      autoComplete="given-email"
                       name="email"
                       {...register("email", {
                         required: "email should not be empty",
