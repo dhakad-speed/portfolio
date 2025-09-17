@@ -85,8 +85,8 @@ label {
 /* max-width: 991px */
 @media screen and (max-width: 991px) {
   .hero-headline-block {
-    top: 389px !important;
-    left: 12px;
+    top: 395px !important;
+    left: 22px;
   }
   .hero-headline {
     letter-spacing: -4.5px;
@@ -98,8 +98,8 @@ label {
     height: 290px;
   }
   .ayush-img-about {
-    width: 338px;
-    height: 338px;
+    width: 290px;
+    height: 290px;
   }
   nav {
     padding: 20px 0px !important;

@@ -19,7 +19,9 @@ export default function Home() {
               repe
               className="intro-text-wrapper"
             >
-              <div className="intro-text text-3xl font-bold">Hey There I'm</div>
+              <div className="intro-text text-3xl font-bold">
+                Hey There I&apos;m
+              </div>
               <div className="intro-text-name font-bold text-3xl">
                 Ayush Dhakad
               </div>
@@ -75,12 +77,12 @@ export default function Home() {
             >
               {" "}
               <Link href={"/contact"}>
-                <div className="flex  justify-self-center pb-5 lg:mt-[-70px] md:ml-auto">
+                <div className="flex  justify-self-center pb-5 lg:mt-[-70px] ">
                   <button
                     id="chat"
                     className="rounded-full w-[146px] h-[146px] bg-[#9b36f2] text-white dark:bg-[#323232] uppercase"
                   >
-                    Let's Chat
+                    Let&apos;s Chat
                   </button>
                 </div>
               </Link>
