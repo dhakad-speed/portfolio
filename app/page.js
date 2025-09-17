@@ -30,7 +30,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="current-available w-[206px] md:block hidden"
             >
-              <div className="current-text text-xl ">
+              <div className="current-text text-base ">
                 Currently available for freelance projects 🚀
               </div>
             </motion.div>
@@ -53,12 +53,12 @@ export default function Home() {
               />
             </motion.div>
           </div>
-          <div className="flex lg:flex-col lg:gap-y-20 lg:ml-15 mt-10 md:flex-row  flex-col  justify-center">
+          <div className="flex lg:flex-col lg:gap-y-20 lg:ml-15 mt-10 md:flex-row md:gap-x-  flex-col  justify-center skill-element">
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="skill-wrapper"
+              className="skill-wrapper  "
             >
               <div className="skill-text  font-bold ">
                 A passionate video editor blending creativity with storytelling
@@ -75,7 +75,7 @@ export default function Home() {
             >
               {" "}
               <Link href={"/contact"}>
-                <div className="flex justify-self-center pb-5 lg:mt-[-70px]">
+                <div className="flex  justify-self-center pb-5 lg:mt-[-70px] md:ml-auto">
                   <button
                     id="chat"
                     className="rounded-full w-[146px] h-[146px] bg-[#9b36f2] text-white dark:bg-[#323232] uppercase"
