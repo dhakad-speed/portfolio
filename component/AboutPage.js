@@ -54,7 +54,7 @@ function AboutPage() {
             alt="ayush-img"
             width={500}
             height={500}
-            className="object-contain ayush-img-about   dark:border dark:border-transparent border border-black rounded-full"
+            className="object-cover ayush-img-about rounded-full"
             priority
           />
         </motion.div>

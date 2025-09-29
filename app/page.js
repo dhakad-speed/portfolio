@@ -50,7 +50,7 @@ export default function Home() {
                 alt="ayush-img"
                 width={500}
                 height={500}
-                className="object-contain ayush-img rounded-full dark:border dark:border-transparent border border-black"
+                className="object ayush-img rounded-full "
                 priority
               />
             </motion.div>
