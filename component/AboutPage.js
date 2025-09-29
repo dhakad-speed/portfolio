@@ -24,7 +24,9 @@ function AboutPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="intro-text-wrapper"
           >
-            <div className="intro-text text-3xl  font-bold">Hey There I'm</div>
+            <div className="intro-text text-3xl  font-bold">
+              Hey There I&apos;m
+            </div>
             <div className="intro-text-name font-bold text-3xl">
               Ayush Dhakad
             </div>
@@ -36,7 +38,7 @@ function AboutPage() {
           >
             <Link href={"/contact"}>
               <button className="rounded-full w-[146px] h-[146px] dark:bg-[#323232] bg-[#9b36f2] text-white uppercase">
-                Let's Chat
+                Let&apos;s Chat
               </button>
             </Link>
           </motion.div>
@@ -48,7 +50,7 @@ function AboutPage() {
           className="rounded mx-auto "
         >
           <Image
-            src="https://iili.io/3znizAJ.png"
+            src="https://iili.io/KEWPwTx.png"
             alt="ayush-img"
             width={500}
             height={500}

@@ -46,7 +46,7 @@ export default function Home() {
             >
               {" "}
               <Image
-                src="https://iili.io/3znizAJ.png"
+                src="https://iili.io/KEWPwTx.png"
                 alt="ayush-img"
                 width={500}
                 height={500}
