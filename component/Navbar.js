@@ -4,6 +4,7 @@ import { useClickAway } from "react-use";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, easeOut, motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,24 +32,31 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto  lg:px-8 md:px-4 nav-menu">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 text-2xl font-bold">
-            <div className="text-3xl ">Ayush.</div>
+            <div className="text-3xl ">
+              <Image
+                src={"https://iili.io/KOLCzFI.png"}
+                width={108}
+                height={34}
+                alt="text-logo"
+              />
+            </div>
           </div>
 
-          <div className="hidden md:flex lg:inline-block space-x-11">
+          <div className="nav-links lg:flex lg:gap-x-10">
             {links.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
                 className={`${isActive(
                   href
-                )}  text-xl list-none relative inline-block px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 dark:after:bg-white after:bg-[#9b36f2] after:transition-transform after:duration-300 hover:after:scale-x-100`}
+                )}  text-[16px] text-base list-none relative inline-block  after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 dark:after:bg-white after:bg-[#9b36f2] after:transition-transform after:duration-300 hover:after:scale-x-100`}
               >
                 {label}
               </Link>
             ))}
           </div>
 
-          <div ref={ref} className="md:hidden flex items-center">
+          <div ref={ref} className="menu-button flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               aria-expanded={isOpen}
@@ -82,7 +90,7 @@ export default function Navbar() {
             initial={{ y: "-100%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: "-100%", opacity: 0 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            transition={{ duration: 0.4, ease: "backInOut" }}
             className={`
                 absolute top-20 left-0 right-0 z-50
           lg:hidden  w-full dark:bg-[#1f1f1f] bg-white  shadow-lg flex flex-col items-center

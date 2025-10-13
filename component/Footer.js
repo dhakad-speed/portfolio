@@ -37,7 +37,7 @@ function Footer() {
           </motion.div>
         </div>
 
-        <div className="flex lg:flex-row flex-col justify-between gap-4 mt-12">
+        <div className="flex lg:flex-row flex-col justify-around gap-4 mt-12">
           {" "}
           <motion.div
             initial={{ opacity: 0, y: 65 }}
@@ -45,7 +45,7 @@ function Footer() {
             transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
             className="flex text-[#ffffffa3]   font-bold  flex-col md:items-center items-center  lg:items-start gap-2"
           >
-            <div className="head text-white  lg:text-5xl lg:font-bold uppercase font-bold">
+            <div className="head text-white lg:font-bold uppercase font-bold">
               Main
             </div>
             <div className="text-xl">
@@ -191,7 +191,7 @@ function Footer() {
             transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
             className="flex text-[#ffffffa3] font-bold flex-col md:items-center items-center lg:items-start gap-2"
           >
-            <div className="head text-white lg:text-5xl lg:font-bold font-bold  uppercase">
+            <div className="head text-white lg:font-bold font-bold  uppercase">
               Follow me
             </div>
             <div className="text-xl">

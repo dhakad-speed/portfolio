@@ -5,40 +5,44 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <motion.div>
-      <div
-        id="home"
-        className="bg-white text-[#0c0407] max-w-7xl  mx-auto lg:mb-[300px] px-4 sm:px-6 lg:px-8 dark:bg-[#1f1f1f] dark:text-white lg:pt-10 md:pt-4 pt-5 items-center"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center">
-          <div className="flex flex-col gap-y-20 lg:mr-15">
+    <motion.div className="animated-container">
+      <div className="global-padding">
+        <div
+          id="home"
+          className="bg-white text-[#0c0407]  dark:bg-[#1f1f1f] dark:text-white home-wrapper"
+        >
+          <div className="home-container">
+            <div className="hero-content-01">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.2,
+                  ease: "easeInOut",
+                }}
+                repe
+                className="intro-text-wrapper"
+              >
+                <div className="intro-text  font-medium">
+                  Hey There I&apos;m
+                </div>
+                <div className="intro-text-name font-bold ">Ayush Dhakad</div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="current-available w-[206px] "
+              >
+                <div className="current-text  font-medium">
+                  Currently available for freelance projects 🚀
+                </div>
+              </motion.div>
+            </div>
+
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
-              repe
-              className="intro-text-wrapper"
-            >
-              <div className="intro-text text-3xl font-bold">
-                Hey There I&apos;m
-              </div>
-              <div className="intro-text-name font-bold text-3xl">
-                Ayush Dhakad
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="current-available w-[206px] md:block hidden"
-            >
-              <div className="current-text text-base ">
-                Currently available for freelance projects 🚀
-              </div>
-            </motion.div>
-          </div>
-          <div className="rounded mx-auto">
-            <motion.div
+              className="hero-image"
               initial={{ opacity: 0, y: 20, scale: 0.95, rotateY: 10 }}
               animate={{ opacity: 1, y: 0, scale: 1, rotateY: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
@@ -48,47 +52,46 @@ export default function Home() {
               <Image
                 src="https://iili.io/KEWPwTx.png"
                 alt="ayush-img"
-                width={500}
+                width={498}
                 height={500}
-                className="object ayush-img rounded-full "
+                className="ayush-img"
                 priority
               />
             </motion.div>
-          </div>
-          <div className="flex lg:flex-col lg:gap-y-20 lg:ml-15 mt-10 md:flex-row md:gap-x-  flex-col  justify-center skill-element">
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="skill-wrapper  "
-            >
-              <div className="skill-text  font-bold ">
-                A passionate video editor blending creativity with storytelling
-                to craft engaging, polished content. Skilled in Premiere Pro,
-                After Effects, and DaVinci Resolve with expertise in cutting,
-                color grading, sound, and motion graphics.
-              </div>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-            >
+            <div className="hero-content-02 ">
               {" "}
-              <Link href={"/contact"}>
-                <div className="flex  justify-self-center pb-5 lg:mt-[-70px] ">
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+                className="skill-wrapper"
+              >
+                <div className="text-base text-[#666] skill-text ">
+                  A passionate video editor blending creativity with
+                  storytelling to craft engaging, polished content. Skilled in
+                  Premiere Pro, After Effects, and DaVinci Resolve with
+                  expertise in cutting, color grading, sound, and motion
+                  graphics.
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+              >
+                {" "}
+                <Link href={"/contact"}>
                   <button
                     id="chat"
-                    className="rounded-full w-[146px] h-[146px] bg-[#9b36f2] text-white dark:bg-[#323232] uppercase"
+                    className=" bg-[#9b36f2] text-white dark:bg-[#323232] contact-btn "
                   >
                     Let&apos;s Chat
                   </button>
-                </div>
-              </Link>
-            </motion.div>
-          </div>
-          <div className="flex justify-self-center">
+                </Link>
+              </motion.div>
+            </div>
+
             <div className="hero-headline-block absolute">
               <motion.div
                 initial={{ opacity: 0, y: 20, scale: 0.9 }}
