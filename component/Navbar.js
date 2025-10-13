@@ -32,14 +32,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto  lg:px-8 md:px-4 nav-menu">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 text-2xl font-bold">
-            <div className="text-3xl ">
-              <Image
-                src={"https://iili.io/KOLCzFI.png"}
-                width={108}
-                height={34}
-                alt="text-logo"
-              />
-            </div>
+            <div className="text-3xl ">Ayush.</div>
           </div>
 
           <div className="nav-links lg:flex lg:gap-x-10">

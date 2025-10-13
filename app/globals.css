@@ -322,4 +322,12 @@ label {
     font-size: 52px;
     line-height: 52px;
   }
+  .contact-btn-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .skill-wrapper .skill-text {
+    text-align: center;
+    font-size: 14px;
+  }
 }
