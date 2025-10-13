@@ -244,6 +244,9 @@ label {
     width: 100%;
     height: auto;
   }
+  .global-padding {
+    padding-inline: 12px;
+  }
   nav {
     padding-inline: 12px;
   }
