@@ -95,12 +95,14 @@ export default function Navbar() {
         `}
           >
             {links.map(({ href, label }) => (
-              <div
-                key={href}
-                className="hover:bg-[#9b36f2] text-white py-2 my-2 w-full flex justify-center"
-              >
+              <div key={href} className=" my-1 w-full flex justify-center">
                 {" "}
-                <Link href={href} className={`${isActive(href)}`}>
+                <Link
+                  href={href}
+                  className={`${isActive(
+                    href
+                  )} hover:bg-[#9b36f2] hover:text-white w-full text-center py-1`}
+                >
                   {label}
                 </Link>
               </div>
