@@ -42,7 +42,7 @@ export default function Navbar() {
                 href={href}
                 className={`${isActive(
                   href
-                )}  text-[16px] text-base list-none relative inline-block  after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 dark:after:bg-white after:bg-[#9b36f2] after:transition-transform after:duration-300 hover:after:scale-x-100`}
+                )} text-[16px] text-base hover:text-[#9b36f2] list-none relative inline-block  after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 dark:after:bg-white after:bg-[#9b36f2] after:transition-transform after:duration-300 hover:after:scale-x-100`}
               >
                 {label}
               </Link>
@@ -54,21 +54,21 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               aria-expanded={isOpen}
               aria-label="toggleButton"
-              className="relative flex flex-col justify-center  items-center w-10 h-10"
+              className="relative flex flex-col justify-center  items-center w-10 h-5"
             >
               <span
-                className={`absolute w-6 h-[2px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
+                className={`absolute w-6 h-[4px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
                   isOpen ? "rotate-45" : "-translate-y-2"
                 }`}
               ></span>
               <span
-                className={`absolute w-6 h-[2px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
+                className={`absolute w-6 h-[4px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
                   isOpen ? "opacity-0" : "opacity-100"
                 }`}
               ></span>
 
               <span
-                className={`absolute w-6 h-[2px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
+                className={`absolute w-6 h-[4px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
                   isOpen ? "-rotate-45" : "translate-y-2"
                 }`}
               ></span>
@@ -96,7 +96,9 @@ export default function Navbar() {
               <Link
                 key={href}
                 href={href}
-                className={`${isActive(href)} block px-4 py-2 list-none `}
+                className={`${isActive(
+                  href
+                )} px-4 py-2 list-none  text-[16px] text-base hover:bg-[#9b36f2]  relative inline-block  after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 dark:after:bg-white after:bg-[#9b36f2] after:transition-transform after:duration-300 hover:after:scale-x-100`}
               >
                 {label}
               </Link>
