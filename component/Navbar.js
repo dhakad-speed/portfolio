@@ -16,7 +16,9 @@ export default function Navbar() {
       ? "dark:text-white text-gray-900"
       : "dark:text-[#ffffffa3] text-[#0c0407] dark:hover:text-gray-100";
   useEffect(() => {
-    setIsOpen(false);
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 500);
   }, [pathname]);
   const links = [
     { href: "/", label: "Home" },
@@ -93,9 +95,12 @@ export default function Navbar() {
         `}
           >
             {links.map(({ href, label }) => (
-              <div className="hover:bg-[#9b36f2] text-white py-2 my-2 w-full">
+              <div
+                key={href}
+                className="hover:bg-[#9b36f2] text-white py-2 my-2 w-full flex justify-center"
+              >
                 {" "}
-                <Link key={href} href={href} className={`${isActive(href)}`}>
+                <Link href={href} className={`${isActive(href)}`}>
                   {label}
                 </Link>
               </div>
