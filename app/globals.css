@@ -333,4 +333,7 @@ label {
     text-align: center;
     font-size: 16px;
   }
+  .contact-headline-block {
+    padding-bottom: 2rem;
+  }
 }

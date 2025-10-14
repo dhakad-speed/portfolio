@@ -59,9 +59,9 @@ export default function Navbar() {
               className="relative flex flex-col justify-center  items-center w-10 h-5"
             >
               <span
-                className={`absolute w-6 h-[4px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
-                  isOpen ? "rotate-45" : "-translate-y-2"
-                }`}
+                className={`absolute w-6 h-[4px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300
+                  //  ${isOpen ? "rotate-45" : "-translate-y-2"}
+                  `}
               ></span>
               <span
                 className={`absolute w-6 h-[4px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
@@ -70,9 +70,9 @@ export default function Navbar() {
               ></span>
 
               <span
-                className={`absolute w-6 h-[4px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 ${
-                  isOpen ? "-rotate-45" : "translate-y-2"
-                }`}
+                className={`absolute w-6 h-[4px] dark:bg-white bg-black shadow-inner rounded transition-all duration-300 
+                  // ${isOpen ? "-rotate-45" : "translate-y-2"}
+                  `}
               ></span>
             </button>
           </div>

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-
+import "./../app/globals.css";
 import React, { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 function ContactForm() {
@@ -243,7 +243,7 @@ function ContactForm() {
             initial={{ opacity: 0, y: 93 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="md:col-span-4 sm:col-span-1 flex flex-col gap-y-[80px]"
+            className="md:col-span-4 sm:col-span-1 flex flex-col md:gap-y-[80px] gap-y-[20px]"
           >
             <div className="flex flex-col">
               <div className="location text-[14px] font-bold">

@@ -10,7 +10,7 @@ function ProjectPage() {
           initial={{ opacity: 0, y: 75 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="lg:text-9xl md:text-8xl text-6xl uppercase font-bold mb-12"
+          className="lg:text-9xl md:text-8xl text-5xl uppercase font-bold mb-12"
         >
           projects
         </motion.div>
