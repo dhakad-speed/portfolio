@@ -10,6 +10,7 @@ const nextConfig = {
       "images.unsplash.com",
       "images.pexels.com",
       "i.ibb.co",
+      "ik.imagekit.io",
     ],
   },
 };

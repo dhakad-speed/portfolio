@@ -87,7 +87,7 @@ export default function Navbar() {
             exit={{ y: "-100%", opacity: 0 }}
             transition={{ duration: 0.4, ease: "backInOut" }}
             className={`
-                absolute top-20 left-0 right-0 z-50
+                absolute top-14 left-0 right-0 z-999
           lg:hidden  w-full dark:bg-[#1f1f1f] bg-white  shadow-lg flex flex-col items-center
           drawer
           

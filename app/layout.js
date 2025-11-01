@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       <head>
         <link
           rel="icon"
-          href="https://iili.io/KO6bTlI.jpg"
+          href="https://ik.imagekit.io/dhakadspeed/WhatsApp%20Image%202025-10-13%20at%203.44.35%20PM.jpeg?updatedAt=1760431779980&tr=c-at_least,w-40,h-40,r-max"
           type="image/x-icon"
           sizes="256x256"
         />
