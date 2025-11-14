@@ -37,7 +37,7 @@ function Footer() {
           </motion.div>
         </div>
 
-        <div className="flex lg:flex-row flex-col justify-around gap-4 lg:mt-12 mt-4">
+        <div className="flex lg:flex-row flex-col justify-evenly gap-4 lg:mt-12 mt-4">
           {" "}
           <motion.div
             initial={{ opacity: 0, y: 65 }}
